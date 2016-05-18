@@ -1,0 +1,284 @@
+//
+//  TimelineCollectionViewController.swift
+//  PhotoRoll
+//
+//  Created by Francisco Jose  on 14/4/16.
+//  Copyright © 2016 Francisco Jose . All rights reserved.
+//
+
+import UIKit
+
+private let reuseIdentifier = "photoCell"
+private let sectionInsets = UIEdgeInsets(top: 2.5, left: 2.5, bottom: 2.5, right: 2.5)
+private var elementsCount = 0
+private var sizeForElementsInRow : [CGSize] = []
+
+class TimelineCollectionViewController: UICollectionViewController, PhotosTimelineViewControllerInput {
+    
+    var output: PhotosTimelineViewControllerOutput!
+    var router: PhotosTimelineRouter!
+    
+    var displayedMedia : [PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia] = []
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        PhotosTimelineConfigurator.sharedInstance.configure(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Register cell classes
+        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        output.fetchMedia(PhotosTimeline_FetchMedia_Request())
+    }
+    
+    // MARK: Display logic
+    
+    func displayMedia(viewModel: PhotosTimeline_FetchMedia_ViewModel) {
+        displayedMedia = viewModel.displayedMedia
+        collectionView!.reloadData()
+    }
+    
+    // MARK: UICollectionViewDataSource
+    
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return displayedMedia.count
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        cell.backgroundColor = UIColor.blackColor()
+        
+//        let imageView = UIImageView(image: UIImage(data: NSData(contentsOfURL: NSURL(string: displayedMedia[indexPath.row].imageUrl)!)!))
+//        imageView.contentMode = .ScaleAspectFill
+//        imageView.frame = cell.frame
+//        cell.addSubview(imageView)
+        
+//        cell.bringSubviewToFront(imageView)
+        // Configure the cell
+        
+        return cell
+    }
+    
+    var sumOfSizes : CGFloat = 0
+    var rowFulfilled : Bool = false
+    
+//    func rotated() {
+//        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
+//        {
+//            print("landscape")
+//        }
+//        
+//        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
+//        {
+//            print("Portrait")
+//        }
+//    }
+//    
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+//        if UIDevice.currentDevice().orientation.isLandscape.boolValue {
+//            print("Landscape")
+//        } else {
+//            print("Portrait")
+//        }
+//    }
+}
+
+
+extension TimelineCollectionViewController : UICollectionViewDelegateFlowLayout {
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        if elementsCount == 0 || elementsCount == sizeForElementsInRow.count {
+            sizeForElementsInRow = []
+            //Calculate the size for the items on this row
+            adjustSizeForMedia(indexPath.row)
+//            var screenSize = UIScreen.mainScreen().bounds.size
+//            screenSize.height = 180
+//            screenSize.width -= 10
+//            adjustSizeForMedia(indexPath.row, constrainedTo: screenSize)
+        }
+        
+        let size = sizeForElementsInRow[safe: elementsCount] ?? CGSizeMake(0, 0)
+        elementsCount = elementsCount == sizeForElementsInRow.count ? 0 : elementsCount + 1
+        
+        return size
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+}
+
+extension TimelineCollectionViewController {
+<<<<<<< HEAD
+    /* Returns max height and width depending on screenSize, mantaining the aspect ratio of the image
+    *
+    */
+    //    func maxImageSize(width: Int, height: Int) -> CGSize {
+    //        var screenSize = UIScreen.mainScreen().bounds.size
+    //        //Set max height to 200px
+    //        screenSize.height = 180
+    //        screenSize.width -= 10
+    //        
+    //        return scaledSize(CGSize(width: width, height: height), constrainedTo: screenSize)
+    //    }
+=======
+>>>>>>> 7faea38f2235d040423d3fcaab3fa75638719de8
+    
+    func scaledSize(size: CGSize,constrainedTo maxSize: CGSize) -> CGSize {
+        let ratio : CGFloat = min(maxSize.width / size.width, maxSize.height / size.height);
+        
+        return CGSize(width: size.width * ratio, height: size.height * ratio)
+    }
+    
+    //    func adjustSizeForMedia(row: Int, constrainedTo maxSize: CGSize) -> (result: CGSize, remainingSpace: CGSize) {
+    //        if let media = displayedMedia[safe:row] {
+    //            let size = scaledSize(CGSize(width: media.width, height: media.height), constrainedTo: maxSize)
+    //            let remainingSize = maxSize.width - size.width
+    //            
+    //            sizeForElementsInRow.append(size)
+    //            if remainingSize > CGFloat(Double(sizeForElementsInRow.count) * 2.5) {
+    //                return adjustSizeForMedia(row+1, constrainedTo: CGSizeMake(remainingSize, size.height))
+    //            }
+    //        }
+    //        
+    //        return (CGSizeZero, CGSizeZero)
+    //    }
+    
+    func adjustSizeForMedia(row: Int, constrainedTo maxSize: CGSize) {
+        if let media = displayedMedia[safe:row] {
+            let size = scaledSize(CGSize(width: media.width, height: media.height), constrainedTo: maxSize)
+            //            let remainingSize = maxSize.width - size.width
+            
+            sizeForElementsInRow.append(size)
+            //            if remainingSize > CGFloat(Double(sizeForElementsInRow.count) * 2.5) {
+            //                return adjustSizeForMedia(row+1, constrainedTo: CGSizeMake(remainingSize, size.height))
+            //                return false
+            //            }
+        }
+        //        return false
+    }
+    
+<<<<<<< HEAD
+    func adjustSizeForMedia(row: Int) -> CGSize {
+        var screenSize = UIScreen.mainScreen().bounds.size
+        screenSize.height = 180
+        screenSize.width -= 10
+        
+        var rowFulfilled = false
+        var internalRow = row
+        //https://swiftcoder.me/2014/08/24/collection-view-with-parallax-scrolling/
+        
+        //Get the ratio of the images depending on the screen
+        repeat {
+            screenSize.width -= CGFloat(sizeForElementsInRow.count) * 10
+            adjustSizeForMedia(internalRow)
+            rowFulfilled = sizeForElementsInRow.map() { $0.width }.reduce(0, combine: +) >= screenSize.width - CGFloat(Double(sizeForElementsInRow.count) * 2.5)
+            internalRow = internalRow + 1
+            
+            //Adjust the width for the items, once scaled, because might be the space is too small for the last item
+            //Distribute the width among items
+            if rowFulfilled { return preferredSizeForItems() }
+        } while (rowFulfilled)
+        return CGSizeZero
+=======
+    
+    func adjustSizeForMedia(row: Int) {
+        var screenSize = UIScreen.mainScreen().bounds.size
+        screenSize.height = 180
+        screenSize.width -= 6
+        
+//        screenSize.width -= CGFloat(sizeForElementsInRow.count) * 10
+        
+        adjustSizeForMedia(row, constrainedTo: screenSize)
+        rowFulfilled = sizeForElementsInRow.map() { $0.width }.reduce(0, combine: +) >= screenSize.width - CGFloat(Double(sizeForElementsInRow.count) * 2.5)
+        if (rowFulfilled) {
+            preferredSizeForItems()
+        } else {
+            if (row < displayedMedia.count) { adjustSizeForMedia(row+1) }
+        }
+        
+//        
+//        //https://swiftcoder.me/2014/08/24/collection-view-with-parallax-scrolling/
+>>>>>>> 7faea38f2235d040423d3fcaab3fa75638719de8
+    }
+    
+    func preferredSizeForItems() -> CGSize {
+        var screenSize = UIScreen.mainScreen().bounds.size
+        screenSize.height = 180
+        screenSize.width = screenSize.width - (6 + (sizeForElementsInRow.count > 1 ? (2.5 * CGFloat(sizeForElementsInRow.count)) : 0))
+        
+        //Get minHeight for the elements in the row
+        var minHeight = sizeForElementsInRow.map{ $0.height }.minElement()
+        minHeight = minHeight < 80 ? 80 : minHeight
+        
+<<<<<<< HEAD
+        //        minHeight = (maxHeight - minHeight) > 60 ? minHeight + 30 : minHeight
+=======
+//        minHeight = (maxHeight - minHeight) > 60 ? minHeight + 30 : minHeight
+>>>>>>> 7faea38f2235d040423d3fcaab3fa75638719de8
+        
+        //Filter and scale the images depending on the height of the smallest one.
+        sizeForElementsInRow = sizeForElementsInRow.map { CGSizeMake($0.width, minHeight!) }
+        
+        //If there is only 1 element, adjust it to the screen width, so it fills all the space
+        if sizeForElementsInRow.count == 1 {
+            sizeForElementsInRow[0] = CGSizeMake(screenSize.width, sizeForElementsInRow[0].height)
+            return sizeForElementsInRow[0]
+        } else if sizeForElementsInRow.count > 1 {
+            //If there are more than 1 elements, readjust the size for the items, taking in mind the number of items
+            //and the ratio of the image to get the most proper size
+            
+            //sizeForElementsInRow = sizeForElementsInRow.map() { CGSizeMake(($0.width / screenSize.width) * sizeForElementsInRow.map() { $0.width }.reduce(0, combine: +), $0.height) }
+            //The code above is much cleaner, but it's also much heavy for the performance
+            var sumOfWidths : CGFloat = 0
+            var sizes : [CGFloat] = []
+            
+            for s in sizeForElementsInRow {
+                sizes.append(s.width)
+                sumOfWidths = sumOfWidths + s.width
+            }
+            
+            for i in 0 ..< sizes.count {
+                sizeForElementsInRow[i] = CGSizeMake(((sizes[i] / sumOfWidths) * screenSize.width), sizeForElementsInRow[i].height)
+            }
+            
+<<<<<<< HEAD
+            //            var maxWidth = sizeForElementsInRow.map{ $0.height }.maxElement()
+            //            var sizes : [CGSize] = []
+            //            for s in sizeForElementsInRow {
+            //                //Get element of maxWidth to calculate the percent of screen (depending on elements) it needs to be displayed
+            //                sizes = sizes.filter(){ $0.width != maxWidth! }
+            //                if sizes.count > 0 {
+            //                    maxWidth = sizes.map{ $0.height }.maxElement()
+            //                    
+            //                }
+            //            }
+            
+            return sizeForElementsInRow[0]
+=======
+>>>>>>> 7faea38f2235d040423d3fcaab3fa75638719de8
+        }
+        return CGSizeZero
+    }
+}
+
+extension CollectionType {
+    /// Returns the element at the specified index iff it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Generator.Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}

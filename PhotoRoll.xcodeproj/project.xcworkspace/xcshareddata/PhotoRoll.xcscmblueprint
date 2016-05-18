@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "34EE7392C97D955A5F56332657F8CED63B05B126",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "34EE7392C97D955A5F56332657F8CED63B05B126" : 0,
+    "AADFB81A88FA48B427717648B974A1F82400B981" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A54B3266-137C-4F2D-8E1B-FA6C5073920C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "34EE7392C97D955A5F56332657F8CED63B05B126" : "PhotoRoll\/",
+    "AADFB81A88FA48B427717648B974A1F82400B981" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PhotoRoll",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PhotoRoll.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/cantero\/photoroll.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34EE7392C97D955A5F56332657F8CED63B05B126"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:cantero\/xcode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AADFB81A88FA48B427717648B974A1F82400B981"
+    }
+  ]
+}
