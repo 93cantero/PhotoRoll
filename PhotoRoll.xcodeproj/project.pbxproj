@@ -58,6 +58,9 @@
 		5BA250701CBFB303005F59AD /* TimelineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2506F1CBFB303005F59AD /* TimelineCollectionViewController.swift */; };
 		5BA250711CBFB303005F59AD /* TimelineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2506F1CBFB303005F59AD /* TimelineCollectionViewController.swift */; };
 		5BB867861CAC34CB00C109BE /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E856C1CAAA10800641C58 /* Decoders.swift */; };
+		5BE313781CEDCA6D00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313771CEDCA6D00C20996 /* ImageDetailViewController.swift */; };
+		5BE313791CEDCA6D00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313771CEDCA6D00C20996 /* ImageDetailViewController.swift */; };
+		5BE3137A1CEDCA6D00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313771CEDCA6D00C20996 /* ImageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,7 @@
 		5B9010A51C9ACEFC00796561 /* PhotosTimelineViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTimelineViewControllerTests.swift; path = PhotosTimeline/PhotosTimelineViewControllerTests.swift; sourceTree = "<group>"; };
 		5B9010BD1C9AE36900796561 /* FetchMediaWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchMediaWorker.swift; path = PhotosTimeline/Workers/FetchMediaWorker.swift; sourceTree = "<group>"; };
 		5BA2506F1CBFB303005F59AD /* TimelineCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineCollectionViewController.swift; path = PhotosTimeline/TimelineCollectionViewController.swift; sourceTree = "<group>"; };
+		5BE313771CEDCA6D00C20996 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDetailViewController.swift; path = ImageDetail/ImageDetailViewController.swift; sourceTree = "<group>"; };
 		D3513D604CD6D4D6FBE97CFD /* Pods_PhotoRollTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRollTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE64EE8A41CF2A21D52FAACA /* Pods_PhotoRoll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRoll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -199,7 +203,7 @@
 			children = (
 				5B90108A1C99AAAA00796561 /* Utils */,
 				5B9010851C99AA3700796561 /* HTTPClient */,
-				5B9010751C99A97800796561 /* Timeline */,
+				5BE313761CEDC99B00C20996 /* Classes */,
 				5B9010741C99918300796561 /* Resources */,
 				5B9010731C99915D00796561 /* Main */,
 				5B9010441C99913F00796561 /* ViewController.swift */,
@@ -331,6 +335,23 @@
 				5B9010BD1C9AE36900796561 /* FetchMediaWorker.swift */,
 			);
 			name = Workers;
+			sourceTree = "<group>";
+		};
+		5BE313751CEDC95F00C20996 /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5BE313771CEDCA6D00C20996 /* ImageDetailViewController.swift */,
+			);
+			name = ImageDetail;
+			sourceTree = "<group>";
+		};
+		5BE313761CEDC99B00C20996 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5BE313751CEDC95F00C20996 /* ImageDetail */,
+				5B9010751C99A97800796561 /* Timeline */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +505,7 @@
 				5B9010911C99AB8A00796561 /* APIModels.swift in Sources */,
 				5B90104B1C99913F00796561 /* PhotoRoll.xcdatamodeld in Sources */,
 				5B9010431C99913F00796561 /* AppDelegate.swift in Sources */,
+				5BE313781CEDCA6D00C20996 /* ImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +526,7 @@
 				5B3FB32E1CECB36C00035A4E /* ImageCache.swift in Sources */,
 				5B9010BF1C9AE36900796561 /* FetchMediaWorker.swift in Sources */,
 				5B9010B61C9AD53A00796561 /* PhotosTimelineModels.swift in Sources */,
+				5BE313791CEDCA6D00C20996 /* ImageDetailViewController.swift in Sources */,
 				5B3FB3291CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */,
 				5B9010B31C9AD4FE00796561 /* PhotosTimelineInteractor.swift in Sources */,
 				5BA250711CBFB303005F59AD /* TimelineCollectionViewController.swift in Sources */,
@@ -526,6 +549,7 @@
 				5B9010661C99913F00796561 /* PhotoRollUITests.swift in Sources */,
 				5B3FB3341CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
 				5B9010891C99AA6F00796561 /* BaseClientAPI.swift in Sources */,
+				5BE3137A1CEDCA6D00C20996 /* ImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

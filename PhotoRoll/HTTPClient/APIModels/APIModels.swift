@@ -53,6 +53,7 @@ import Foundation
 //MARK: 500px
 enum FiveHundredPx {
     case PopularPhotosWithSize(Int?)
+    case Photo(Int)
 }
 
 extension FiveHundredPx : TargetAPI, CustomStringConvertible {
@@ -77,6 +78,8 @@ extension FiveHundredPx : TargetAPI, CustomStringConvertible {
         case .PopularPhotosWithSize (let size):
             guard let s = size else { return "photos/?feature=popular&consumer_key=\(self.consumerKey)" }
             return "photos/?feature=popular&consumer_key=\(self.consumerKey)&image_size=\(s)"
+        case .Photo(let id):
+            return "photos\(id)?consumer_key=\(self.consumerKey)"
         }
     }
     
@@ -84,6 +87,8 @@ extension FiveHundredPx : TargetAPI, CustomStringConvertible {
         switch self {
         case .PopularPhotosWithSize (_):
             return ["feature": "popular", "filters": [ "category": false, "exclude": false ], "current_page": 1, "total_pages": 250,"total_items": 5000, "photos": [["name": "Orange or lemon", "description": "",  "category": 0, "width": 472, "height": 709,"image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg"]]]
+        case .Photo(_):
+            return ["photo":""]
         }
     }
 }

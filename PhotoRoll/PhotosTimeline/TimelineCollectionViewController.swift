@@ -56,7 +56,10 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
         cell.backgroundColor = UIColor.blackColor()
                 
         cell.imageViewPhoto.imageFromUrl(displayedMedia[indexPath.row].imageUrl)
-        cell.setImageOffset(currentImageOffset)
+        
+        let yOffset:CGFloat = ((collectionView.contentOffset.y - cell.frame.origin.y) / 200) * 25
+        cell.setImageOffset(CGPointMake(0, yOffset))
+        
         
         return cell
     }
@@ -82,4 +85,10 @@ extension TimelineCollectionViewController {
         }
     }
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        self.collectionView?.performBatchUpdates({ 
+            self.collectionView?.reloadData()
+        }, completion: nil)
+    }
+
 }

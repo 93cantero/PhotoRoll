@@ -45,7 +45,7 @@ class PhotosTimelineRouter: PhotosTimelineRouterInput
   {
     // NOTE: Teach the router which scenes it can communicate with
     
-    if segue.identifier == "ShowSomewhereScene" {
+    if segue.identifier == "ImageDetails" {
       passDataToSomewhereScene(segue)
     }
   }
