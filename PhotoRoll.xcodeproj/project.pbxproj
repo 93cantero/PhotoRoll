@@ -13,9 +13,9 @@
 		5B3FB32D1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
 		5B3FB32E1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
 		5B3FB32F1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
-		5B3FB3321CECCC1300035A4E /* TimelineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionViewController.swift */; };
-		5B3FB3331CECCC1300035A4E /* TimelineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionViewController.swift */; };
-		5B3FB3341CECCC1300035A4E /* TimelineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionViewController.swift */; };
+		5B3FB3321CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */; };
+		5B3FB3331CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */; };
+		5B3FB3341CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */; };
 		5B8E856D1CAAA10800641C58 /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E856C1CAAA10800641C58 /* Decoders.swift */; };
 		5B9010431C99913F00796561 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010421C99913F00796561 /* AppDelegate.swift */; };
 		5B9010451C99913F00796561 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010441C99913F00796561 /* ViewController.swift */; };
@@ -80,7 +80,7 @@
 /* Begin PBXFileReference section */
 		5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoImageCollectionViewCell.swift; path = PhotosTimeline/Cells/PhotoImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B3FB32C1CECB36C00035A4E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Utils/ImageDownloader/ImageCache.swift; sourceTree = "<group>"; };
-		5B3FB3311CECCC1300035A4E /* TimelineCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineCollectionViewController.swift; path = Utils/CollectionViewGridLayout/TimelineCollectionViewController.swift; sourceTree = "<group>"; };
+		5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineCollectionGridLayout.swift; path = Utils/CollectionViewGridLayout/TimelineCollectionGridLayout.swift; sourceTree = "<group>"; };
 		5B8E856C1CAAA10800641C58 /* Decoders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Decoders.swift; path = Utils/Decoders.swift; sourceTree = "<group>"; };
 		5B90103F1C99913E00796561 /* PhotoRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9010421C99913F00796561 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		5B3FB3301CECCBDC00035A4E /* CollectionViewGridLayout */ = {
 			isa = PBXGroup;
 			children = (
-				5B3FB3311CECCC1300035A4E /* TimelineCollectionViewController.swift */,
+				5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */,
 			);
 			name = CollectionViewGridLayout;
 			sourceTree = "<group>";
@@ -470,7 +470,7 @@
 				5B90107D1C99A9A300796561 /* PhotosTimelineConfigurator.swift in Sources */,
 				5BA250701CBFB303005F59AD /* TimelineCollectionViewController.swift in Sources */,
 				5B90107F1C99A9A300796561 /* PhotosTimelineModels.swift in Sources */,
-				5B3FB3321CECCC1300035A4E /* TimelineCollectionViewController.swift in Sources */,
+				5B3FB3321CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
 				5B9010BE1C9AE36900796561 /* FetchMediaWorker.swift in Sources */,
 				5B9010821C99A9A300796561 /* PhotosTimelineViewController.swift in Sources */,
 				5B9010811C99A9A300796561 /* PhotosTimelineRouter.swift in Sources */,
@@ -510,7 +510,7 @@
 				5B9010B51C9AD50300796561 /* PhotosTimelineViewController.swift in Sources */,
 				5B9010A81C9ACEFC00796561 /* PhotosTimelineInteractorTests.swift in Sources */,
 				5B90105B1C99913F00796561 /* PhotoRollTests.swift in Sources */,
-				5B3FB3331CECCC1300035A4E /* TimelineCollectionViewController.swift in Sources */,
+				5B3FB3331CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
 				5B9010881C99AA6F00796561 /* BaseClientAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +524,7 @@
 				5B90108E1C99AAC000796561 /* StringExtensions.swift in Sources */,
 				5B9010A11C9AADAC00796561 /* ClientPhotos.swift in Sources */,
 				5B9010661C99913F00796561 /* PhotoRollUITests.swift in Sources */,
-				5B3FB3341CECCC1300035A4E /* TimelineCollectionViewController.swift in Sources */,
+				5B3FB3341CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
 				5B9010891C99AA6F00796561 /* BaseClientAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

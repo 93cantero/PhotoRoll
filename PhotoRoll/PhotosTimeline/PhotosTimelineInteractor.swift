@@ -26,7 +26,7 @@ class PhotosTimelineInteractor: PhotosTimelineInteractorInput
     
     func fetchMedia(request: PhotosTimeline_FetchMedia_Request) {
         
-        mediaFiveHundredPxWorker.fetchMedia(FiveHundredPx.PopularPhotosWithSize(2048)) { (inner: () throws -> [Media]) -> Void in
+        mediaFiveHundredPxWorker.fetchMedia(FiveHundredPx.PopularPhotosWithSize(31)) { (inner: () throws -> [Media]) -> Void in
             
             do{
                 let response = PhotosTimeline_FetchMedia_Response(media: try inner())

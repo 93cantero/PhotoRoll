@@ -56,11 +56,30 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
         cell.backgroundColor = UIColor.blackColor()
                 
         cell.imageViewPhoto.imageFromUrl(displayedMedia[indexPath.row].imageUrl)
+        cell.setImageOffset(currentImageOffset)
         
         return cell
     }
     
     var sumOfSizes : CGFloat = 0
     var rowFulfilled : Bool = false
+    
+    //Offset for images
+    var currentImageOffset: CGPoint! = CGPointZero
+}
+
+
+//MARK: Extension for parallax effect on photos
+
+extension TimelineCollectionViewController {
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        for view in collectionView!.visibleCells(){
+            let view:PhotoImageCollectionViewCell = view as! PhotoImageCollectionViewCell
+            let yOffset:CGFloat = ((collectionView!.contentOffset.y - view.frame.origin.y) / 200) * 25
+            currentImageOffset = CGPointMake(0, yOffset)
+            view.setImageOffset(currentImageOffset)
+        }
+    }
     
 }

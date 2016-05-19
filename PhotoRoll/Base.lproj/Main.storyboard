@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vje-Ef-K0Y">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Photos Timeline View Controller-->
@@ -122,16 +123,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zwh-OF-hD4">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="-50" y="-50" width="300" height="300"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zwh-OF-hD4" secondAttribute="bottom" id="8zG-7y-6fE"/>
-                                    <constraint firstItem="zwh-OF-hD4" firstAttribute="leading" secondItem="dB9-BG-RjW" secondAttribute="leading" id="DT6-Oz-CbD"/>
-                                    <constraint firstItem="zwh-OF-hD4" firstAttribute="top" secondItem="dB9-BG-RjW" secondAttribute="top" id="H9N-HN-MvJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="zwh-OF-hD4" secondAttribute="trailing" id="izf-Z0-SuI"/>
+                                    <constraint firstItem="zwh-OF-hD4" firstAttribute="centerY" secondItem="dB9-BG-RjW" secondAttribute="centerY" id="14l-DN-hSS"/>
+                                    <constraint firstItem="zwh-OF-hD4" firstAttribute="height" secondItem="dB9-BG-RjW" secondAttribute="height" multiplier="1.5:1" id="2q3-PL-uRK"/>
+                                    <constraint firstItem="zwh-OF-hD4" firstAttribute="centerX" secondItem="dB9-BG-RjW" secondAttribute="centerX" id="8UF-Lp-Vnz"/>
+                                    <constraint firstItem="zwh-OF-hD4" firstAttribute="width" secondItem="dB9-BG-RjW" secondAttribute="width" multiplier="1.5:1" id="ip4-ls-cKO"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
