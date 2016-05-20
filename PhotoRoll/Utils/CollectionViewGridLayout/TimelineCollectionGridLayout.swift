@@ -40,6 +40,7 @@ extension TimelineCollectionViewController : UICollectionViewDelegateFlowLayout 
 
 extension TimelineCollectionViewController {
     
+    //Return the scaled size constrained to a maxSize
     func scaledSize(size: CGSize,constrainedTo maxSize: CGSize) -> CGSize {
         let ratio : CGFloat = min(maxSize.width / size.width, maxSize.height / size.height);
         
@@ -55,26 +56,31 @@ extension TimelineCollectionViewController {
     
     
     func adjustSizeForMedia(row: Int) {
+        let numberOfElements = sizeForElementsInRow.count == 2 ? 1 : sizeForElementsInRow.count
+        
         var screenSize = UIScreen.mainScreen().bounds.size
         screenSize.height = 180
-        screenSize.width -= 6
+        screenSize.width = screenSize.width - CGFloat(Double(numberOfElements) * 2.5) - 6
         
         //        screenSize.width -= CGFloat(sizeForElementsInRow.count) * 10
         
         adjustSizeForMedia(row, constrainedTo: screenSize)
-        rowFulfilled = sizeForElementsInRow.map() { $0.width }.reduce(0, combine: +) >= screenSize.width - CGFloat(Double(sizeForElementsInRow.count) * 2.5)
+        rowFulfilled = sizeForElementsInRow.map() { $0.width }.reduce(0, combine: +) >= screenSize.width - CGFloat(Double(numberOfElements) * 2.5)
         if (rowFulfilled) {
             preferredSizeForItems()
         } else {
             if (row < displayedMedia.count) { adjustSizeForMedia(row+1) }
+            else if (screenSize.width - (sizeForElementsInRow.last?.width)! < 120) { preferredSizeForItems() }
         }
         
     }
     
     func preferredSizeForItems() -> CGSize {
+        let numberOfElements = sizeForElementsInRow.count == 2 ? 1 : sizeForElementsInRow.count
+        
         var screenSize = UIScreen.mainScreen().bounds.size
         screenSize.height = 180
-        screenSize.width = screenSize.width - (6 + (sizeForElementsInRow.count > 1 ? (2.5 * CGFloat(sizeForElementsInRow.count)) : 0))
+        screenSize.width = screenSize.width - (6 + (sizeForElementsInRow.count > 1 ? (2.5 * CGFloat(numberOfElements)) : 0))
         
         //Get minHeight for the elements in the row
         var minHeight = sizeForElementsInRow.map{ $0.height }.minElement()

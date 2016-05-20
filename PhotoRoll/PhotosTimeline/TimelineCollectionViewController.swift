@@ -18,7 +18,7 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
     var output: PhotosTimelineViewControllerOutput!
     var router: PhotosTimelineRouter!
     
-    var displayedMedia : [PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia] = []
+    var displayedMedia : [Photos.DisplayedMedia] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,12 +30,12 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
         
         // Register cell classes
         
-        output.fetchMedia(PhotosTimeline_FetchMedia_Request())
+        output.fetchMedia(Photos.FetchMedia.Request())
     }
     
     // MARK: Display logic
     
-    func displayMedia(viewModel: PhotosTimeline_FetchMedia_ViewModel) {
+    func displayMedia(viewModel: Photos.FetchMedia.ViewModel) {
         displayedMedia = viewModel.displayedMedia
         collectionView!.reloadData()
     }
@@ -56,7 +56,9 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
         cell.backgroundColor = UIColor.blackColor()
                 
         cell.imageViewPhoto.imageFromUrl(displayedMedia[indexPath.row].imageUrl)
-        cell.setImageOffset(currentImageOffset)
+        
+        let yOffset:CGFloat = ((collectionView.contentOffset.y - cell.frame.origin.y) / 200) * 25
+        cell.setImageOffset(CGPointMake(0, yOffset))
         
         return cell
     }
@@ -82,4 +84,10 @@ extension TimelineCollectionViewController {
         }
     }
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        self.collectionView?.performBatchUpdates({ 
+            self.collectionView?.reloadData()
+        }, completion: nil)
+    }
+
 }

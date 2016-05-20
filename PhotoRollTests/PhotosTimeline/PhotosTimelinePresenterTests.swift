@@ -39,10 +39,10 @@ class PhotosTimelinePresenterTests: XCTestCase
     class PhotosTimeLinePresenterOutputSpy : PhotosTimelinePresenterOutput {
         //MARK: Method call expectations
         var displayMediaIsCalled = false
-        var photosTimeline_fetchMedia_viewModel : PhotosTimeline_FetchMedia_ViewModel!
+        var photosTimeline_fetchMedia_viewModel : Photos.FetchMedia.ViewModel!
         
         //MARK: Spied methods
-        func displayMedia(viewModel: PhotosTimeline_FetchMedia_ViewModel) {
+        func displayMedia(viewModel: Photos.FetchMedia.ViewModel) {
             displayMediaIsCalled = true
             
             photosTimeline_fetchMedia_viewModel = viewModel
@@ -64,12 +64,12 @@ class PhotosTimelinePresenterTests: XCTestCase
         let date = NSCalendar.currentCalendar().dateFromComponents(components)!
         
         let media = [Media(name: "Foto 1", desc: "Bonita", createdAt: date, category: 0, width: 0, height: 0, imageUrl: "http://www.dumpaday.com/wp-content/uploads/2011/04/Random-Funny-Photos-Part-132_14-2.jpg")]
-        let response = PhotosTimeline_FetchMedia_Response(media: media)
+        let response = Photos.FetchMedia.Response(media: media)
         //When
         sut.presentFetchedMedia(response)
         
         //Then
-        let displayedMedia : PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia = output.photosTimeline_fetchMedia_viewModel.displayedMedia[0]
+        let displayedMedia : Photos.DisplayedMedia = output.photosTimeline_fetchMedia_viewModel.displayedMedia[0]
         XCTAssertEqual(displayedMedia.name, "Foto 1", "Name should be equal to Foto 1")
         XCTAssertEqual(displayedMedia.desc, "Bonita", "Description should be equal to 'Bonita'")
         XCTAssertEqual(displayedMedia.createdAt, "6/29/07", "CreatedAt date should equal to the day of the first iPhone release :D")
@@ -83,7 +83,7 @@ class PhotosTimelinePresenterTests: XCTestCase
         sut.output = output
         
         //Test with an empty array just to make sure it is called
-        let response = PhotosTimeline_FetchMedia_Response(media: [])
+        let response = Photos.FetchMedia.Response(media: [])
         
         //When
         sut.presentFetchedMedia(response)

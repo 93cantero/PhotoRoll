@@ -9,11 +9,11 @@
 import UIKit
 
 protocol PhotosTimelineViewControllerInput {
-    func displayMedia(viewModel: PhotosTimeline_FetchMedia_ViewModel)
+    func displayMedia(viewModel: Photos.FetchMedia.ViewModel)
 }
 
 protocol PhotosTimelineViewControllerOutput {
-    func fetchMedia(request: PhotosTimeline_FetchMedia_Request)
+    func fetchMedia(request: Photos.FetchMedia.Request)
 }
 
 class PhotosTimelineViewController: UITableViewController, PhotosTimelineViewControllerInput
@@ -21,7 +21,7 @@ class PhotosTimelineViewController: UITableViewController, PhotosTimelineViewCon
   var output: PhotosTimelineViewControllerOutput!
   var router: PhotosTimelineRouter!
   
-    var displayedMedia : [PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia] = []
+    var displayedMedia : [Photos.DisplayedMedia] = []
     
   // MARK: Object lifecycle
   
@@ -36,7 +36,7 @@ class PhotosTimelineViewController: UITableViewController, PhotosTimelineViewCon
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    output.fetchMedia(PhotosTimeline_FetchMedia_Request())
+    output.fetchMedia(Photos.FetchMedia.Request())
   }
     
     //MARK: TableViewDataSource
@@ -71,7 +71,7 @@ class PhotosTimelineViewController: UITableViewController, PhotosTimelineViewCon
   
   // MARK: Display logic
 
-    func displayMedia(viewModel: PhotosTimeline_FetchMedia_ViewModel) {
+    func displayMedia(viewModel: Photos.FetchMedia.ViewModel) {
         displayedMedia = viewModel.displayedMedia
         tableView.reloadData()
     }

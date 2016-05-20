@@ -52,7 +52,7 @@ class PhotosTimelineViewControllerTests: XCTestCase
         var fetchMediaCalled = false
         
         //MARK: Spied methods
-        func fetchMedia(request: PhotosTimeline_FetchMedia_Request) {
+        func fetchMedia(request: Photos.FetchMedia.Request) {
             fetchMediaCalled = true
         }
     }
@@ -85,8 +85,8 @@ class PhotosTimelineViewControllerTests: XCTestCase
         let tableView = UITableViewSpy()
         sut.tableView = tableView
         
-        let displayedMedia = [PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia(name: "Foto 1", desc: "Bonita", createdAt: "6/29/07", category: "0", imageUrl: "http://www.dumpaday.com/wp-content/uploads/2011/04/Random-Funny-Photos-Part-132_14-2.jpg", width: 100, height: 100)]
-        let viewModel = PhotosTimeline_FetchMedia_ViewModel(displayedMedia: displayedMedia)
+        let displayedMedia = [Photos.DisplayedMedia(name: "Foto 1", desc: "Bonita", createdAt: "6/29/07", category: "0", imageUrl: "http://www.dumpaday.com/wp-content/uploads/2011/04/Random-Funny-Photos-Part-132_14-2.jpg", width: 100, height: 100)]
+        let viewModel = Photos.FetchMedia.ViewModel(displayedMedia: displayedMedia)
         //When
         sut.displayMedia(viewModel)
         
@@ -109,7 +109,7 @@ class PhotosTimelineViewControllerTests: XCTestCase
         //Given
         let tableView = sut.tableView
         
-        let displayedMedia = [PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia(name: "Foto 1", desc: "Bonita", createdAt: "6/29/07", category: "0", imageUrl: "http://www.dumpaday.com/wp-content/uploads/2011/04/Random-Funny-Photos-Part-132_14-2.jpg", width: 100, height: 100)]
+        let displayedMedia = [Photos.DisplayedMedia(name: "Foto 1", desc: "Bonita", createdAt: "6/29/07", category: "0", imageUrl: "http://www.dumpaday.com/wp-content/uploads/2011/04/Random-Funny-Photos-Part-132_14-2.jpg", width: 100, height: 100)]
         
         sut.displayedMedia = displayedMedia
         //When

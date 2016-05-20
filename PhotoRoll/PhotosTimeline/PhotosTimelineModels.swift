@@ -9,17 +9,8 @@
 import UIKit
 import CoreData
 
-struct PhotosTimeline_FetchMedia_Request {}
-
-struct PhotosTimeline_FetchMedia_Response {
-    var media : [Media]
-}
-
-struct PhotosTimeline_FetchMedia_ViewModel {
-    
-    var displayedMedia : [DisplayedMedia]
-    
-    struct DisplayedMedia {
+struct Photos {
+    internal struct DisplayedMedia {
         var name : String
         var desc : String
         var createdAt : String
@@ -27,6 +18,32 @@ struct PhotosTimeline_FetchMedia_ViewModel {
         var imageUrl : String
         var width : Int
         var height : Int
+    }
+    
+    //Media
+    struct FetchMedia {
+        
+        struct Request {}
+        struct Response {
+            var media : [Media]
+        }
+        struct ViewModel {
+            var displayedMedia : [DisplayedMedia]
+        }
+    }
+    
+    //Image
+    struct FetchImage {
+        struct Request {
+            var id : Int
+        }
+        struct Response {
+            var media : Media
+        }
+        
+        struct ViewModel {
+            var displayedMedia : DisplayedMedia
+        }
     }
 }
 

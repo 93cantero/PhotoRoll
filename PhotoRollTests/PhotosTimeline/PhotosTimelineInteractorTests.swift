@@ -40,7 +40,7 @@ class PhotosTimelineInteractorTests: XCTestCase
         //MARK: Method call expectations
         var presentFetchedMediaIsCalled = false
         
-        func presentFetchedMedia(response: PhotosTimeline_FetchMedia_Response) {
+        func presentFetchedMedia(response: Photos.FetchMedia.Response) {
             presentFetchedMediaIsCalled = true
         }
     }
@@ -69,11 +69,11 @@ class PhotosTimelineInteractorTests: XCTestCase
         sut.mediaFiveHundredPxWorker = worker
         
         //When
-        let request = PhotosTimeline_FetchMedia_Request()
+        let request = Photos.FetchMedia.Request()
         sut.fetchMedia(request)
         
         //Then
-        XCTAssert(worker.fetchMediaIsCalled, "fetchMedia() should ask do FetchMediaWorker to fetch the media")
+        XCTAssert(worker.fetchMediaIsCalled, "fetchMedia() should ask FetchMediaWorker to fetch the media")
         XCTAssert(output.presentFetchedMediaIsCalled, "fetchMedia() should ask presenter to formar fetched media")
     }
     

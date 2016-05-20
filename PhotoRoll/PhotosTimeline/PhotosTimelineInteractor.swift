@@ -10,11 +10,11 @@
 import UIKit
 
 protocol PhotosTimelineInteractorInput {
-    func fetchMedia(request: PhotosTimeline_FetchMedia_Request)
+    func fetchMedia(request: Photos.FetchMedia.Request)
 }
 
 protocol PhotosTimelineInteractorOutput {
-    func presentFetchedMedia(response: PhotosTimeline_FetchMedia_Response)
+    func presentFetchedMedia(response: Photos.FetchMedia.Response)
 }
 
 class PhotosTimelineInteractor: PhotosTimelineInteractorInput
@@ -24,12 +24,12 @@ class PhotosTimelineInteractor: PhotosTimelineInteractorInput
     
     // MARK: Business logic
     
-    func fetchMedia(request: PhotosTimeline_FetchMedia_Request) {
+    func fetchMedia(request: Photos.FetchMedia.Request) {
         
         mediaFiveHundredPxWorker.fetchMedia(FiveHundredPx.PopularPhotosWithSize(31)) { (inner: () throws -> [Media]) -> Void in
             
             do{
-                let response = PhotosTimeline_FetchMedia_Response(media: try inner())
+                let response = Photos.FetchMedia.Response(media: try inner())
                 
                 self.output.presentFetchedMedia(response)
             } catch {

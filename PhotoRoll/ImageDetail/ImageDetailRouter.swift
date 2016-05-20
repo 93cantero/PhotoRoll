@@ -1,22 +1,21 @@
 //
-//  PhotosTimelineRouter.swift
+//  ImageDetailRouter.swift
 //  PhotoRoll
 //
-//  Created by Francisco Jose  on 16/3/16.
+//  Created by Francisco Jose  on 20/5/16.
 //  Copyright (c) 2016 Francisco Jose . All rights reserved.
 //
 
 import UIKit
 
-protocol PhotosTimelineRouterInput
+protocol ImageDetailRouterInput
 {
   func navigateToSomewhere()
 }
 
-class PhotosTimelineRouter: PhotosTimelineRouterInput
+class ImageDetailRouter: ImageDetailRouterInput
 {
-    //TODO: Change this
-  weak var viewController: TimelineCollectionViewController!
+  weak var viewController: ImageDetailViewController!
   
   // MARK: Navigation
   
@@ -45,7 +44,7 @@ class PhotosTimelineRouter: PhotosTimelineRouterInput
   {
     // NOTE: Teach the router which scenes it can communicate with
     
-    if segue.identifier == "ImageDetails" {
+    if segue.identifier == "ShowSomewhereScene" {
       passDataToSomewhereScene(segue)
     }
   }

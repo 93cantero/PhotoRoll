@@ -137,6 +137,7 @@
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="imageViewPhoto" destination="zwh-OF-hD4" id="bqY-Di-dAM"/>
+                                    <segue destination="Fmw-iR-rch" kind="show" identifier="ImageDetails" id="RRc-gA-37L"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -150,6 +151,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBd-kO-WDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1896" y="103"/>
+        </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="rTE-PU-Lz4">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fmw-iR-rch" customClass="ImageDetailViewController" customModule="PhotoRoll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YMp-NW-xnf"/>
+                        <viewControllerLayoutGuide type="bottom" id="7pT-XN-pUO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZVe-Lf-uc2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJS-W5-6oY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Fmw-iR-rch" id="YcK-rW-kQq"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YJS-W5-6oY" firstAttribute="leading" secondItem="ZVe-Lf-uc2" secondAttribute="leading" id="1Q2-4Q-i8a"/>
+                            <constraint firstItem="YJS-W5-6oY" firstAttribute="top" secondItem="ZVe-Lf-uc2" secondAttribute="top" id="5KM-UE-oLl"/>
+                            <constraint firstAttribute="trailing" secondItem="YJS-W5-6oY" secondAttribute="trailing" id="AZK-Uz-zMf"/>
+                            <constraint firstItem="7pT-XN-pUO" firstAttribute="top" secondItem="YJS-W5-6oY" secondAttribute="bottom" id="LXx-5e-Mu3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="YJS-W5-6oY" id="ZCM-Ly-uiI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxR-Pc-x23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="105"/>
         </scene>
     </scenes>
 </document>

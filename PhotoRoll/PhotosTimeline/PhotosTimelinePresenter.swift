@@ -9,11 +9,11 @@
 import UIKit
 
 protocol PhotosTimelinePresenterInput {
-    func presentFetchedMedia(response: PhotosTimeline_FetchMedia_Response)
+    func presentFetchedMedia(response: Photos.FetchMedia.Response)
 }
 
 protocol PhotosTimelinePresenterOutput: class {
-    func displayMedia(viewModel: PhotosTimeline_FetchMedia_ViewModel)
+    func displayMedia(viewModel: Photos.FetchMedia.ViewModel)
 }
 
 class PhotosTimelinePresenter: PhotosTimelinePresenterInput {
@@ -28,8 +28,8 @@ class PhotosTimelinePresenter: PhotosTimelinePresenterInput {
     
   // MARK: Presentation logic
   
-    func presentFetchedMedia(response: PhotosTimeline_FetchMedia_Response) {
-        var displayedMedia : [PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia] = []
+    func presentFetchedMedia(response: Photos.FetchMedia.Response) {
+        var displayedMedia : [Photos.DisplayedMedia] = []
         
         for media in response.media {
             
@@ -39,10 +39,10 @@ class PhotosTimelinePresenter: PhotosTimelinePresenterInput {
 
             let desc = media.desc ?? ""
             
-            displayedMedia.append(PhotosTimeline_FetchMedia_ViewModel.DisplayedMedia(name: media.name, desc: desc, createdAt: date, category: "0", imageUrl: media.imageUrl, width: media.width, height: media.height))
+            displayedMedia.append(Photos.DisplayedMedia(name: media.name, desc: desc, createdAt: date, category: "0", imageUrl: media.imageUrl, width: media.width, height: media.height))
         }
         
-        let viewModel = PhotosTimeline_FetchMedia_ViewModel(displayedMedia: displayedMedia)
+        let viewModel = Photos.FetchMedia.ViewModel(displayedMedia: displayedMedia)
         output.displayMedia(viewModel)
     }
 }
