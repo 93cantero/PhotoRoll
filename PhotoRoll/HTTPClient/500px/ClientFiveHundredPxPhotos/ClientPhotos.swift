@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ClientPhotos : BaseClientAPI {
-    
-    private func fetch(target: TargetAPI, completion: (success: Bool, object: AnyObject?) -> ()) {
-        get(target, params: target.parameters) { (success, obj) -> () in
-            completion(success: success, object: obj)
+class ClientPhotos: BaseClientAPI {
+
+    fileprivate func fetch(_ target: TargetAPI, completion: @escaping (_ success: Bool, _ object: Any?) -> Void) {
+        get(target, params: target.parameters) { (success, obj) -> Void in
+            completion(success, obj)
         }
     }
-    
+
     //    func fetch(target: FiveHundredPx, completion: (success: Bool, object: AnyObject?) -> ()) {
     //        fetch(target) { (success, obj) -> () in
     //            

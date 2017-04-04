@@ -9,39 +9,54 @@
 import UIKit
 
 protocol PhotosTimelinePresenterInput {
-    func presentFetchedMedia(response: Photos.FetchMedia.Response)
+    func presentFetchedMedia(_ response: Photos.FetchMedia.Response)
 }
 
 protocol PhotosTimelinePresenterOutput: class {
-    func displayMedia(viewModel: Photos.FetchMedia.ViewModel)
+    func displayMedia(_ viewModel: Photos.FetchMedia.ViewModel)
 }
 
 class PhotosTimelinePresenter: PhotosTimelinePresenterInput {
-  weak var output: PhotosTimelinePresenterOutput!
-  
-    var dateFormatter : NSDateFormatter {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .ShortStyle
-        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+    weak var output: PhotosTimelinePresenterOutput!
+
+    var clientStyleDateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HHmmssZZ"
         return dateFormatter
     }
     
-  // MARK: Presentation logic
-  
-    func presentFetchedMedia(response: Photos.FetchMedia.Response) {
-        var displayedMedia : [Photos.DisplayedMedia] = []
-        
+    var storedDateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        return dateFormatter
+    }
+
+    // MARK: Presentation logic
+
+    func presentFetchedMedia(_ response: Photos.FetchMedia.Response) {
+        var displayedMedia: [Photos.DisplayedMedia] = []
+
         for media in response.media {
-            
-            var date : String = ""
-            let d = media.createdAt
-            date = dateFormatter.stringFromDate(d)
+
+            var date: String = ""
+            let s = media.createdAt.replacingOccurrences(of: ":", with: "")
+            if let d = clientStyleDateFormatter.date(from: s) {
+                date = storedDateFormatter.string(from: d)
+            }
 
             let desc = media.desc ?? ""
             
-            displayedMedia.append(Photos.DisplayedMedia(name: media.name, desc: desc, createdAt: date, category: "0", imageUrl: media.imageUrl, width: media.width, height: media.height))
+            var highQualityImageUrl: String?
+            if let imgs = media.images {
+                let i = imgs.filter() { $0.size == .longestEdge(.twoThousandFourtyEight) }
+                
+                highQualityImageUrl = i.first?.httpsUrl
+            }
+            
+            displayedMedia.append(Photos.DisplayedMedia(imageId: String(media.imageId), name: media.name, desc: desc, createdAt: date, category: "0", imageUrl: media.imageUrl, highQualityImageUrl: highQualityImageUrl, width: media.width, height: media.height))
         }
-        
+
         let viewModel = Photos.FetchMedia.ViewModel(displayedMedia: displayedMedia)
         output.displayMedia(viewModel)
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-//MARK: INSTAGRAM 
+// MARK: INSTAGRAM 
 //enum Instagram {
 //    case Authorize
 //    case Posts
@@ -50,45 +50,46 @@ import Foundation
 //    }
 //}
 
-//MARK: 500px
+// MARK: 500px
 enum FiveHundredPx {
-    case PopularPhotosWithSize(Int?)
-    case Photo(Int)
+    case popularPhotos(sized: [MediaDimensions]?)
+    case photo(Int)
 }
 
 extension FiveHundredPx : TargetAPI, CustomStringConvertible {
-    var BaseURL : String { return "https://api.500px.com/v1/" }
-    var consumerKey : String { return "uKJSNSC9mE3PzuWiYoSX7PcVokWFZ8rkxXB1AsAC" }
-    var parameters : [String : AnyObject]? {
+    var BaseURL: String { return "https://api.500px.com/v1/" }
+    var consumerKey: String { return "uKJSNSC9mE3PzuWiYoSX7PcVokWFZ8rkxXB1AsAC" }
+    var parameters: [String : Any]? {
         get {
-            var params : [String : AnyObject]? = [:]
+            let params: [String : Any]? = [:]
             switch self {
 //            case .PopularPhotos:
 //                params?.updateValue("popular", forKey: "feature")
             default: break
             }
-            
+
 //            params?.updateValue(self.consumerKey, forKey: "consumer_key") as? [String: AnyObject]
             return params
         }
     }
-    
-    var path : String {
+
+    var path: String {
         switch self {
-        case .PopularPhotosWithSize (let size):
-            guard let s = size else { return "photos/?feature=popular&consumer_key=\(self.consumerKey)" }
-            return "photos/?feature=popular&consumer_key=\(self.consumerKey)&image_size=\(s)"
-        case .Photo(let id):
-            return "photos\(id)?consumer_key=\(self.consumerKey)"
+        case .popularPhotos(let sized):
+            guard let s = sized else { return "photos/?feature=popular&consumer_key=\(self.consumerKey)" }
+            let imageSize = s.reduce("") { return "\($0)\($0 != "" ? "," : "")\($1)" }
+            return "photos/?feature=popular&consumer_key=\(self.consumerKey)&image_size=\(imageSize)"
+        case .photo(let id):
+            return "photos/\(id)?consumer_key=\(self.consumerKey)"
         }
     }
-    
-    var sampleJSON : JSONObject {
+
+    var sampleJSON: JSONObject {
         switch self {
-        case .PopularPhotosWithSize (_):
-            return ["feature": "popular", "filters": [ "category": false, "exclude": false ], "current_page": 1, "total_pages": 250,"total_items": 5000, "photos": [["name": "Orange or lemon", "description": "",  "category": 0, "width": 472, "height": 709,"image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg"]]]
-        case .Photo(_):
-            return ["photo":["name": "Orange or lemon", "description": "",  "category": 0, "width": 472, "height": 709,"image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg"]]
+        case .popularPhotos (_):
+            return ["feature": "popular", "filters": [ "category": false, "exclude": false ], "current_page": 1, "total_pages": 250, "total_items": 5000, "photos": [["name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg"]]]
+        case .photo(_):
+            return ["photo": ["name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg"]]
         }
     }
 }

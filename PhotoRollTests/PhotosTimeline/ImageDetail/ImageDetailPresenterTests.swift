@@ -8,34 +8,30 @@
 
 import XCTest
 
-class ImageDetailPresenterTests: XCTestCase
-{
+class ImageDetailPresenterTests: XCTestCase {
     // MARK: Subject under test
-    
+
     var sut: ImageDetailPresenter!
-    
+
     // MARK: Test lifecycle
-    
-    override func setUp()
-    {
+
+    override func setUp() {
         super.setUp()
         setupImageDetailPresenter()
     }
-    
-    override func tearDown()
-    {
+
+    override func tearDown() {
         super.tearDown()
     }
-    
+
     // MARK: Test setup
-    
-    func setupImageDetailPresenter()
-    {
+
+    func setupImageDetailPresenter() {
         sut = ImageDetailPresenter()
     }
-    
+
     // MARK: Test doubles
-    
+
     // MARK: Tests
-    
+
 }

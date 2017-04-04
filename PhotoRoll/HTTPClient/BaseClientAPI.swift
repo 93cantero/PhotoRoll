@@ -8,109 +8,116 @@
 
 import Foundation
 
-
 enum JSONType {
-    case JSONNumber(NSNumber)
-    case JSONString(String)
-    case JSONBool(Bool)
-    case JSONNull
-    case JSONArray(Array<JSONType>)
-    case JSONObject(Dictionary<String,JSONType>)
-    case JSONInvalid(NSError)
+    case jsonNumber(NSNumber)
+    case jsonString(String)
+    case jsonBool(Bool)
+    case jsonNull
+    case jsonArray(Array<JSONType>)
+    case jsonObject(Dictionary<String, JSONType>)
+    case jsonInvalid(NSError)
 }
 
-typealias JSONObject = [String:AnyObject]
+typealias JSONObject = [String:Any]
 
 protocol TargetAPI {
-    var BaseURL : String { get }
-    var parameters : [String : AnyObject]? { get }
-    var path : String { get }
-    var sampleJSON : JSONObject { get }
+    var BaseURL: String { get }
+    var parameters: [String : Any]? { get }
+    var path: String { get }
+    var sampleJSON: JSONObject { get }
 }
 
 extension TargetAPI {
-    var description : String { return self.BaseURL + self.path }
+    var description: String { return self.BaseURL + self.path }
 }
 
 /** Allows to extend functionality to several APIs that ends on the same resulting object.
  *
  */
 protocol APISupport {
-    var type : [APIType]? { set get }
+    var type: [APIType]? { set get }
 }
 
 protocol APIType {
-    var notCommonKeys : Dictionary<String, String> { get }
+    var notCommonKeys: Dictionary<String, String> { get }
 }
 
-
-//MARK: CLIENT
+// MARK: CLIENT
 class BaseClientAPI {
-    
-    internal class CustomSession : NSObject, NSURLSessionDelegate {
-        @objc internal func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+
+    internal class CustomSession: NSObject, URLSessionDelegate {
+        @objc internal func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
             if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-                let credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!)
-                completionHandler(.UseCredential,credential);
+                let credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+                completionHandler(.useCredential, credential)
             }
         }
     }
-    
+
     // MARK: private composition methods
-    internal func post(target: TargetAPI, params: Dictionary<String, AnyObject>? = nil, completion: (success: Bool, object: AnyObject?) -> ()) {
-        dataTask(clientURLRequest(target) , method: "POST", completion: completion)
+    internal func post(_ target: TargetAPI, params: Dictionary<String, Any>? = nil, completion: @escaping (_ success: Bool, _ object: Any?) -> Void) {
+        dataTask(clientURLRequest(target), method: "POST", completion: completion)
     }
-    
-    internal func put(target: TargetAPI, params: Dictionary<String, AnyObject>? = nil, completion: (success: Bool, object: AnyObject?) -> ()) {
-        dataTask(clientURLRequest(target) , method: "PUT", completion: completion)
+
+    internal func put(_ target: TargetAPI, params: Dictionary<String, Any>? = nil, completion: @escaping (_ success: Bool, _ object: Any?) -> Void) {
+        dataTask(clientURLRequest(target), method: "PUT", completion: completion)
     }
-    
-    internal func get(target: TargetAPI, params: Dictionary<String, AnyObject>? = nil, completion: (success: Bool, object: AnyObject?) -> ()) {
-        dataTask(clientURLRequest(target) , method: "GET", completion: completion)
+
+    internal func get(_ target: TargetAPI, params: Dictionary<String, Any>? = nil, completion: @escaping (_ success: Bool, _ object: Any?) -> Void) {
+        dataTask(clientURLRequest(target), method: "GET", completion: completion)
     }
-    
-    private func dataTask(request: NSMutableURLRequest, method: String, completion: (success: Bool, object: AnyObject?) -> ()) {
-        request.HTTPMethod = method
+
+    fileprivate func dataTask(_ request: NSMutableURLRequest, method: String, completion: @escaping (_ success: Bool, _ object: Any?) -> Void) {
+        request.httpMethod = method
+
+//        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: CustomSession(), delegateQueue: nil)
+
+//        let session = URLSession.shared
+
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.urlCache = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
+        let session = URLSession(configuration: configuration)
+        defer {
+            session.finishTasksAndInvalidate()
+        }
         
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: CustomSession(), delegateQueue: nil)
-        
-        session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+        session.dataTask(with: request as URLRequest) { data, response, error in
             if let data = data {
-                let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
-                if let response = response as? NSHTTPURLResponse where 200...299 ~= response.statusCode {
+                let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let response = response as? HTTPURLResponse, 200...299 ~= response.statusCode {
                     print(response)
-                    dispatch_async(dispatch_get_main_queue(), {
-                        completion(success: true, object: json)
+                    DispatchQueue.main.async(execute: {
+                        completion(true, json)
                     })
                 } else {
                     print(json)
-                    dispatch_async(dispatch_get_main_queue(), {
-                        completion(success: false, object: json)
+                    DispatchQueue.main.async(execute: {
+                        completion(false, json)
                     })
                 }
             } else if let err = error {
-                dispatch_async(dispatch_get_main_queue(), {
-                    completion(success: false, object: err.localizedDescription)
+                DispatchQueue.main.async(execute: {
+                    completion(false, err.localizedDescription)
                 })
             }
-            }.resume()
+            } .resume()
     }
-    
-    private func clientURLRequest(target: TargetAPI) -> NSMutableURLRequest {
-        
-        let request = NSMutableURLRequest(URL: NSURL(string: "\(target.BaseURL)\(target.path)")!)
+
+    fileprivate func clientURLRequest(_ target: TargetAPI) -> NSMutableURLRequest {
+
+        let request = NSMutableURLRequest(url: URL(string: "\(target.BaseURL)\(target.path)")!)
         if let params = target.parameters {
             var paramString = ""
             for (key, value) in params {
                 let escapedKey = key.URLEscapedString
-                let escapedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+                let escapedValue = (value as AnyObject).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
                 paramString += "\(escapedKey)=\(escapedValue!)&"
             }
-            
+
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+            request.httpBody = paramString.data(using: String.Encoding.utf8)
         }
-        
+
         return request
     }
 }

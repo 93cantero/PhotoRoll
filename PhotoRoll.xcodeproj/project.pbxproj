@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260CA82C78ECAD23C24C0407 /* Pods_PhotoRollTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3513D604CD6D4D6FBE97CFD /* Pods_PhotoRollTests.framework */; };
+		325E4533A28060DC5D2ED1C3 /* Pods_PhotoRollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD1C981B0BDC90FC0BCE267 /* Pods_PhotoRollUITests.framework */; };
+		450550BF1DAD0BB400918DF7 /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450550BE1DAD0BB400918DF7 /* SwipeInteractionController.swift */; };
+		45453FBE1E701B7600AB096E /* ImageDetailViewController+ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45453FBD1E701B7600AB096E /* ImageDetailViewController+ImageTransition.swift */; };
+		45453FC21E701BF800AB096E /* TimelineCollectionViewController+ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45453FC11E701BF800AB096E /* TimelineCollectionViewController+ImageTransition.swift */; };
+		45463F941E66D20A00FA65ED /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45463F931E66D20A00FA65ED /* ImageDownloader.swift */; };
+		45463F971E66D9DD00FA65ED /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45463F961E66D9DD00FA65ED /* UIImageViewExtensions.swift */; };
+		454AA8CD1E784308007BD6F2 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454AA8CC1E784308007BD6F2 /* UIColorExtensions.swift */; };
+		4565BFAF1E8957C90035E195 /* UIPanGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565BFAE1E8957C90035E195 /* UIPanGestureRecognizerExtensions.swift */; };
+		4565BFB21E8BEC980035E195 /* BenchmarkTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565BFB11E8BEC980035E195 /* BenchmarkTimer.swift */; };
+		45875F6C1E3B57F30043C52B /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450550BE1DAD0BB400918DF7 /* SwipeInteractionController.swift */; };
+		4595A6721E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595A6711E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift */; };
+		5B3F5A0F1CFC7CF6004B4F23 /* ImageTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F5A0E1CFC7CF6004B4F23 /* ImageTransitioning.swift */; };
+		5B3F5A101CFC7CF6004B4F23 /* ImageTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F5A0E1CFC7CF6004B4F23 /* ImageTransitioning.swift */; };
 		5B3FB3281CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */; };
 		5B3FB3291CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */; };
 		5B3FB32A1CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */; };
 		5B3FB32D1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
 		5B3FB32E1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
-		5B3FB32F1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
 		5B3FB3321CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */; };
 		5B3FB3331CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */; };
-		5B3FB3341CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */; };
+		5B610A501CFC55CB00646828 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B610A4F1CFC55CB00646828 /* ImageUtils.swift */; };
+		5B610A511CFC55CB00646828 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B610A4F1CFC55CB00646828 /* ImageUtils.swift */; };
 		5B8E856D1CAAA10800641C58 /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E856C1CAAA10800641C58 /* Decoders.swift */; };
 		5B9010431C99913F00796561 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010421C99913F00796561 /* AppDelegate.swift */; };
-		5B9010451C99913F00796561 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010441C99913F00796561 /* ViewController.swift */; };
 		5B9010481C99913F00796561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9010461C99913F00796561 /* Main.storyboard */; };
 		5B90104B1C99913F00796561 /* PhotoRoll.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010491C99913F00796561 /* PhotoRoll.xcdatamodeld */; };
 		5B90104D1C99913F00796561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B90104C1C99913F00796561 /* Assets.xcassets */; };
@@ -30,7 +43,6 @@
 		5B90107F1C99A9A300796561 /* PhotosTimelineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010781C99A9A300796561 /* PhotosTimelineModels.swift */; };
 		5B9010801C99A9A300796561 /* PhotosTimelinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010791C99A9A300796561 /* PhotosTimelinePresenter.swift */; };
 		5B9010811C99A9A300796561 /* PhotosTimelineRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90107A1C99A9A300796561 /* PhotosTimelineRouter.swift */; };
-		5B9010821C99A9A300796561 /* PhotosTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90107B1C99A9A300796561 /* PhotosTimelineViewController.swift */; };
 		5B9010871C99AA6F00796561 /* BaseClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010861C99AA6F00796561 /* BaseClientAPI.swift */; };
 		5B9010881C99AA6F00796561 /* BaseClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010861C99AA6F00796561 /* BaseClientAPI.swift */; };
 		5B9010891C99AA6F00796561 /* BaseClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010861C99AA6F00796561 /* BaseClientAPI.swift */; };
@@ -47,7 +59,6 @@
 		5B9010AE1C9ACEFC00796561 /* PhotosTimelineViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010A51C9ACEFC00796561 /* PhotosTimelineViewControllerTests.swift */; };
 		5B9010B31C9AD4FE00796561 /* PhotosTimelineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010771C99A9A300796561 /* PhotosTimelineInteractor.swift */; };
 		5B9010B41C9AD50100796561 /* PhotosTimelinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010791C99A9A300796561 /* PhotosTimelinePresenter.swift */; };
-		5B9010B51C9AD50300796561 /* PhotosTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90107B1C99A9A300796561 /* PhotosTimelineViewController.swift */; };
 		5B9010B61C9AD53A00796561 /* PhotosTimelineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010781C99A9A300796561 /* PhotosTimelineModels.swift */; };
 		5B9010B71C9AD53A00796561 /* PhotosTimelineRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90107A1C99A9A300796561 /* PhotosTimelineRouter.swift */; };
 		5B9010B91C9AD53A00796561 /* PhotosTimelineConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010761C99A9A300796561 /* PhotosTimelineConfigurator.swift */; };
@@ -60,27 +71,32 @@
 		5BB867861CAC34CB00C109BE /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E856C1CAAA10800641C58 /* Decoders.swift */; };
 		5BE3139A1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313931CEF197C00C20996 /* ImageDetailConfigurator.swift */; };
 		5BE3139B1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313931CEF197C00C20996 /* ImageDetailConfigurator.swift */; };
-		5BE3139C1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313931CEF197C00C20996 /* ImageDetailConfigurator.swift */; };
 		5BE3139D1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313941CEF197C00C20996 /* ImageDetailInteractor.swift */; };
 		5BE3139E1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313941CEF197C00C20996 /* ImageDetailInteractor.swift */; };
-		5BE3139F1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313941CEF197C00C20996 /* ImageDetailInteractor.swift */; };
 		5BE313A01CEF197C00C20996 /* ImageDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313951CEF197C00C20996 /* ImageDetailModels.swift */; };
 		5BE313A11CEF197C00C20996 /* ImageDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313951CEF197C00C20996 /* ImageDetailModels.swift */; };
-		5BE313A21CEF197C00C20996 /* ImageDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313951CEF197C00C20996 /* ImageDetailModels.swift */; };
 		5BE313A31CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313961CEF197C00C20996 /* ImageDetailPresenter.swift */; };
 		5BE313A41CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313961CEF197C00C20996 /* ImageDetailPresenter.swift */; };
-		5BE313A51CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313961CEF197C00C20996 /* ImageDetailPresenter.swift */; };
 		5BE313A61CEF197C00C20996 /* ImageDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313971CEF197C00C20996 /* ImageDetailRouter.swift */; };
 		5BE313A71CEF197C00C20996 /* ImageDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313971CEF197C00C20996 /* ImageDetailRouter.swift */; };
-		5BE313A81CEF197C00C20996 /* ImageDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313971CEF197C00C20996 /* ImageDetailRouter.swift */; };
 		5BE313A91CEF197C00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313981CEF197C00C20996 /* ImageDetailViewController.swift */; };
 		5BE313AA1CEF197C00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313981CEF197C00C20996 /* ImageDetailViewController.swift */; };
-		5BE313AB1CEF197C00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313981CEF197C00C20996 /* ImageDetailViewController.swift */; };
 		5BE313BE1CEF1C8A00C20996 /* ImageDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313B91CEF1C8A00C20996 /* ImageDetailInteractorTests.swift */; };
 		5BE313C01CEF1C8A00C20996 /* ImageDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313BA1CEF1C8A00C20996 /* ImageDetailPresenterTests.swift */; };
 		5BE313C21CEF1C8A00C20996 /* ImageDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313BB1CEF1C8A00C20996 /* ImageDetailViewControllerTests.swift */; };
 		5BE313C81CEF2AD400C20996 /* FetchImageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313C71CEF2AD400C20996 /* FetchImageWorker.swift */; };
 		5BE313C91CEF2AD400C20996 /* FetchImageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313C71CEF2AD400C20996 /* FetchImageWorker.swift */; };
+		D8D2CA701E64467200004AB5 /* GDMarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6B1E64467200004AB5 /* GDMarginLabel.swift */; };
+		D8D2CA711E64467200004AB5 /* GDMarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6B1E64467200004AB5 /* GDMarginLabel.swift */; };
+		D8D2CA721E64467200004AB5 /* GDPerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6C1E64467200004AB5 /* GDPerformanceMonitor.swift */; };
+		D8D2CA731E64467200004AB5 /* GDPerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6C1E64467200004AB5 /* GDPerformanceMonitor.swift */; };
+		D8D2CA741E64467200004AB5 /* GDPerformanceMonitorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6D1E64467200004AB5 /* GDPerformanceMonitorDelegate.swift */; };
+		D8D2CA751E64467300004AB5 /* GDPerformanceMonitorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6D1E64467200004AB5 /* GDPerformanceMonitorDelegate.swift */; };
+		D8D2CA761E64467300004AB5 /* GDPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6E1E64467200004AB5 /* GDPerformanceView.swift */; };
+		D8D2CA771E64467300004AB5 /* GDPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6E1E64467200004AB5 /* GDPerformanceView.swift */; };
+		D8D2CA781E64467300004AB5 /* GDWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6F1E64467200004AB5 /* GDWindowViewController.swift */; };
+		D8D2CA791E64467300004AB5 /* GDWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CA6F1E64467200004AB5 /* GDWindowViewController.swift */; };
+		E996EB4C07E17CF9702C31FC /* Pods_PhotoRoll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE64EE8A41CF2A21D52FAACA /* Pods_PhotoRoll.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,13 +117,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450550BE1DAD0BB400918DF7 /* SwipeInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
+		45453FBD1E701B7600AB096E /* ImageDetailViewController+ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageDetailViewController+ImageTransition.swift"; sourceTree = "<group>"; };
+		45453FC11E701BF800AB096E /* TimelineCollectionViewController+ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimelineCollectionViewController+ImageTransition.swift"; path = "PhotosTimeline/TimelineCollectionViewController+ImageTransition.swift"; sourceTree = "<group>"; };
+		45463F931E66D20A00FA65ED /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Utils/ImageDownloader.swift; sourceTree = "<group>"; };
+		45463F961E66D9DD00FA65ED /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewExtensions.swift; path = Utils/Extensions/UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		454AA8CC1E784308007BD6F2 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtensions.swift; path = Utils/Extensions/UIColorExtensions.swift; sourceTree = "<group>"; };
+		4565BFAE1E8957C90035E195 /* UIPanGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPanGestureRecognizerExtensions.swift; path = Utils/Extensions/UIPanGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
+		4565BFB11E8BEC980035E195 /* BenchmarkTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BenchmarkTimer.swift; path = Utils/Timer/BenchmarkTimer.swift; sourceTree = "<group>"; };
+		4595A6711E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageDetailViewController+UIScrollView.swift"; sourceTree = "<group>"; };
+		5B3F5A0E1CFC7CF6004B4F23 /* ImageTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTransitioning.swift; path = Utils/ZoomTransitioning/ImageTransitioning.swift; sourceTree = "<group>"; };
 		5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoImageCollectionViewCell.swift; path = PhotosTimeline/Cells/PhotoImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B3FB32C1CECB36C00035A4E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Utils/ImageDownloader/ImageCache.swift; sourceTree = "<group>"; };
 		5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineCollectionGridLayout.swift; path = Utils/CollectionViewGridLayout/TimelineCollectionGridLayout.swift; sourceTree = "<group>"; };
+		5B610A4F1CFC55CB00646828 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageUtils.swift; path = Utils/ImageUtils/ImageUtils.swift; sourceTree = "<group>"; };
 		5B8E856C1CAAA10800641C58 /* Decoders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Decoders.swift; path = Utils/Decoders.swift; sourceTree = "<group>"; };
 		5B90103F1C99913E00796561 /* PhotoRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9010421C99913F00796561 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B9010441C99913F00796561 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B9010471C99913F00796561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B90104A1C99913F00796561 /* PhotoRoll.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoRoll.xcdatamodel; sourceTree = "<group>"; };
 		5B90104C1C99913F00796561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,7 +150,6 @@
 		5B9010781C99A9A300796561 /* PhotosTimelineModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTimelineModels.swift; path = PhotosTimeline/PhotosTimelineModels.swift; sourceTree = "<group>"; };
 		5B9010791C99A9A300796561 /* PhotosTimelinePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTimelinePresenter.swift; path = PhotosTimeline/PhotosTimelinePresenter.swift; sourceTree = "<group>"; };
 		5B90107A1C99A9A300796561 /* PhotosTimelineRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTimelineRouter.swift; path = PhotosTimeline/PhotosTimelineRouter.swift; sourceTree = "<group>"; };
-		5B90107B1C99A9A300796561 /* PhotosTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTimelineViewController.swift; path = PhotosTimeline/PhotosTimelineViewController.swift; sourceTree = "<group>"; };
 		5B9010861C99AA6F00796561 /* BaseClientAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseClientAPI.swift; path = HTTPClient/BaseClientAPI.swift; sourceTree = "<group>"; };
 		5B90108B1C99AAC000796561 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Utils/StringExtensions.swift; sourceTree = "<group>"; };
 		5B9010901C99AB8A00796561 /* APIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIModels.swift; path = HTTPClient/APIModels/APIModels.swift; sourceTree = "<group>"; };
@@ -144,7 +169,19 @@
 		5BE313BA1CEF1C8A00C20996 /* ImageDetailPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDetailPresenterTests.swift; path = PhotosTimeline/ImageDetail/ImageDetailPresenterTests.swift; sourceTree = "<group>"; };
 		5BE313BB1CEF1C8A00C20996 /* ImageDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDetailViewControllerTests.swift; path = PhotosTimeline/ImageDetail/ImageDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		5BE313C71CEF2AD400C20996 /* FetchImageWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchImageWorker.swift; path = ImageDetail/Workers/FetchImageWorker.swift; sourceTree = "<group>"; };
+		898E49CCFCA910986FD77488 /* Pods-PhotoRollTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRollTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoRollTests/Pods-PhotoRollTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD677C8D2C30112C7C9B6C8C /* Pods-PhotoRollUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRollUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoRollUITests/Pods-PhotoRollUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBD1C981B0BDC90FC0BCE267 /* Pods_PhotoRollUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRollUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3513D604CD6D4D6FBE97CFD /* Pods_PhotoRollTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRollTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3838EC79343F96F8959DE09 /* Pods-PhotoRollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRollTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoRollTests/Pods-PhotoRollTests.release.xcconfig"; sourceTree = "<group>"; };
+		D8D2CA6B1E64467200004AB5 /* GDMarginLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDMarginLabel.swift; path = GDPerformanceMonitoring/GDMarginLabel.swift; sourceTree = "<group>"; };
+		D8D2CA6C1E64467200004AB5 /* GDPerformanceMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDPerformanceMonitor.swift; path = GDPerformanceMonitoring/GDPerformanceMonitor.swift; sourceTree = "<group>"; };
+		D8D2CA6D1E64467200004AB5 /* GDPerformanceMonitorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDPerformanceMonitorDelegate.swift; path = GDPerformanceMonitoring/GDPerformanceMonitorDelegate.swift; sourceTree = "<group>"; };
+		D8D2CA6E1E64467200004AB5 /* GDPerformanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDPerformanceView.swift; path = GDPerformanceMonitoring/GDPerformanceView.swift; sourceTree = "<group>"; };
+		D8D2CA6F1E64467200004AB5 /* GDWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDWindowViewController.swift; path = GDPerformanceMonitoring/GDWindowViewController.swift; sourceTree = "<group>"; };
+		E4607D30E7E6E14BEE93C13C /* Pods-PhotoRoll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRoll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoRoll/Pods-PhotoRoll.release.xcconfig"; sourceTree = "<group>"; };
+		EEE4B27E159BF2BE15EBCD85 /* Pods-PhotoRoll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRoll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoRoll/Pods-PhotoRoll.debug.xcconfig"; sourceTree = "<group>"; };
+		F8AA02ED98C169398F74CE20 /* Pods-PhotoRollUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRollUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoRollUITests/Pods-PhotoRollUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FE64EE8A41CF2A21D52FAACA /* Pods_PhotoRoll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRoll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E996EB4C07E17CF9702C31FC /* Pods_PhotoRoll.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260CA82C78ECAD23C24C0407 /* Pods_PhotoRollTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,19 +206,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325E4533A28060DC5D2ED1C3 /* Pods_PhotoRollUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45463F951E66D74100FA65ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				454AA8CA1E7842EB007BD6F2 /* UIKit */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		454AA8CA1E7842EB007BD6F2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				4565BFAD1E8957B80035E195 /* UIGestures */,
+				454AA8CB1E7842F7007BD6F2 /* UIColor */,
+				45463F961E66D9DD00FA65ED /* UIImageViewExtensions.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		454AA8CB1E7842F7007BD6F2 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				454AA8CC1E784308007BD6F2 /* UIColorExtensions.swift */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		4565BFAD1E8957B80035E195 /* UIGestures */ = {
+			isa = PBXGroup;
+			children = (
+				4565BFAE1E8957C90035E195 /* UIPanGestureRecognizerExtensions.swift */,
+			);
+			name = UIGestures;
+			sourceTree = "<group>";
+		};
+		4565BFB01E8BEC820035E195 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				4565BFB11E8BEC980035E195 /* BenchmarkTimer.swift */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
 		4D1853A1F8F306395E59D788 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FE64EE8A41CF2A21D52FAACA /* Pods_PhotoRoll.framework */,
 				D3513D604CD6D4D6FBE97CFD /* Pods_PhotoRollTests.framework */,
+				CBD1C981B0BDC90FC0BCE267 /* Pods_PhotoRollUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B3F5A111CFC8181004B4F23 /* ZoomTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F5A0E1CFC7CF6004B4F23 /* ImageTransitioning.swift */,
+				450550BE1DAD0BB400918DF7 /* SwipeInteractionController.swift */,
+			);
+			name = ZoomTransitioning;
 			sourceTree = "<group>";
 		};
 		5B3FB3261CECACC400035A4E /* Cells */ = {
@@ -193,6 +285,7 @@
 		5B3FB32B1CECB33D00035A4E /* ImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				45463F931E66D20A00FA65ED /* ImageDownloader.swift */,
 				5B3FB32C1CECB36C00035A4E /* ImageCache.swift */,
 			);
 			name = ImageDownloader;
@@ -206,6 +299,14 @@
 			name = CollectionViewGridLayout;
 			sourceTree = "<group>";
 		};
+		5B610A4E1CFC55AA00646828 /* ImageUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5B610A4F1CFC55CB00646828 /* ImageUtils.swift */,
+			);
+			name = ImageUtils;
+			sourceTree = "<group>";
+		};
 		5B9010361C99913E00796561 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +315,7 @@
 				5B9010641C99913F00796561 /* PhotoRollUITests */,
 				5B9010401C99913E00796561 /* Products */,
 				4D1853A1F8F306395E59D788 /* Frameworks */,
+				AB4CCAF271FC305F402C89A8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,7 +337,6 @@
 				5BE313761CEDC99B00C20996 /* Classes */,
 				5B9010741C99918300796561 /* Resources */,
 				5B9010731C99915D00796561 /* Main */,
-				5B9010441C99913F00796561 /* ViewController.swift */,
 				5B9010491C99913F00796561 /* PhotoRoll.xcdatamodeld */,
 			);
 			path = PhotoRoll;
@@ -273,6 +374,7 @@
 		5B9010741C99918300796561 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8D2CA671E64451800004AB5 /* Frameworks */,
 				5B90104C1C99913F00796561 /* Assets.xcassets */,
 				5B9010511C99913F00796561 /* Info.plist */,
 				5B90104E1C99913F00796561 /* LaunchScreen.storyboard */,
@@ -283,13 +385,12 @@
 		5B9010751C99A97800796561 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				5BE313751CEDC95F00C20996 /* ImageDetail */,
 				5B3FB3261CECACC400035A4E /* Cells */,
 				5B9010841C99A9A800796561 /* Others */,
 				5B9010771C99A9A300796561 /* PhotosTimelineInteractor.swift */,
 				5B9010791C99A9A300796561 /* PhotosTimelinePresenter.swift */,
-				5B90107B1C99A9A300796561 /* PhotosTimelineViewController.swift */,
 				5BA2506F1CBFB303005F59AD /* TimelineCollectionViewController.swift */,
+				45453FC11E701BF800AB096E /* TimelineCollectionViewController+ImageTransition.swift */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -319,6 +420,10 @@
 		5B90108A1C99AAAA00796561 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4565BFB01E8BEC820035E195 /* Timer */,
+				45463F951E66D74100FA65ED /* Extensions */,
+				5B3F5A111CFC8181004B4F23 /* ZoomTransitioning */,
+				5B610A4E1CFC55AA00646828 /* ImageUtils */,
 				5B3FB3301CECCBDC00035A4E /* CollectionViewGridLayout */,
 				5B3FB32B1CECB33D00035A4E /* ImageDownloader */,
 				5B90108B1C99AAC000796561 /* StringExtensions.swift */,
@@ -375,6 +480,8 @@
 				5BE313961CEF197C00C20996 /* ImageDetailPresenter.swift */,
 				5BE313941CEF197C00C20996 /* ImageDetailInteractor.swift */,
 				5BE313981CEF197C00C20996 /* ImageDetailViewController.swift */,
+				4595A6711E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift */,
+				45453FBD1E701B7600AB096E /* ImageDetailViewController+ImageTransition.swift */,
 			);
 			name = ImageDetail;
 			sourceTree = "<group>";
@@ -382,6 +489,7 @@
 		5BE313761CEDC99B00C20996 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BE313751CEDC95F00C20996 /* ImageDetail */,
 				5B9010751C99A97800796561 /* Timeline */,
 			);
 			name = Classes;
@@ -416,6 +524,39 @@
 			name = Workers;
 			sourceTree = "<group>";
 		};
+		AB4CCAF271FC305F402C89A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4B27E159BF2BE15EBCD85 /* Pods-PhotoRoll.debug.xcconfig */,
+				E4607D30E7E6E14BEE93C13C /* Pods-PhotoRoll.release.xcconfig */,
+				898E49CCFCA910986FD77488 /* Pods-PhotoRollTests.debug.xcconfig */,
+				D3838EC79343F96F8959DE09 /* Pods-PhotoRollTests.release.xcconfig */,
+				AD677C8D2C30112C7C9B6C8C /* Pods-PhotoRollUITests.debug.xcconfig */,
+				F8AA02ED98C169398F74CE20 /* Pods-PhotoRollUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8D2CA671E64451800004AB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8D2CA6A1E64465D00004AB5 /* GDPerformanceMonitoring */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8D2CA6A1E64465D00004AB5 /* GDPerformanceMonitoring */ = {
+			isa = PBXGroup;
+			children = (
+				D8D2CA6B1E64467200004AB5 /* GDMarginLabel.swift */,
+				D8D2CA6C1E64467200004AB5 /* GDPerformanceMonitor.swift */,
+				D8D2CA6D1E64467200004AB5 /* GDPerformanceMonitorDelegate.swift */,
+				D8D2CA6E1E64467200004AB5 /* GDPerformanceView.swift */,
+				D8D2CA6F1E64467200004AB5 /* GDWindowViewController.swift */,
+			);
+			name = GDPerformanceMonitoring;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,9 +564,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B90106A1C99913F00796561 /* Build configuration list for PBXNativeTarget "PhotoRoll" */;
 			buildPhases = (
+				F0C1C39C8FA980A2644F20D8 /* [CP] Check Pods Manifest.lock */,
 				5B90103B1C99913E00796561 /* Sources */,
 				5B90103C1C99913E00796561 /* Frameworks */,
 				5B90103D1C99913E00796561 /* Resources */,
+				F427D52FA560741E9A06815C /* [CP] Embed Pods Frameworks */,
+				36AC8A61BB49D80D27A6AE3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,9 +584,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B90106D1C99913F00796561 /* Build configuration list for PBXNativeTarget "PhotoRollTests" */;
 			buildPhases = (
+				6DDA2F3E3D50E9413B7C4735 /* [CP] Check Pods Manifest.lock */,
 				5B9010521C99913F00796561 /* Sources */,
 				5B9010531C99913F00796561 /* Frameworks */,
 				5B9010541C99913F00796561 /* Resources */,
+				3C58C6085F041855EB0A0BC4 /* [CP] Embed Pods Frameworks */,
+				6B821766E9EBD7B47B1D975D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,9 +605,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B9010701C99913F00796561 /* Build configuration list for PBXNativeTarget "PhotoRollUITests" */;
 			buildPhases = (
+				DA31EB9EEB54CAFD4908E8DE /* [CP] Check Pods Manifest.lock */,
 				5B90105D1C99913F00796561 /* Sources */,
 				5B90105E1C99913F00796561 /* Frameworks */,
 				5B90105F1C99913F00796561 /* Resources */,
+				BCA46EB35EBFC3C6D45F812A /* [CP] Embed Pods Frameworks */,
+				09057159A1B377B38FC60CBE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -479,18 +629,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Francisco Jose ";
 				TargetAttributes = {
 					5B90103E1C99913E00796561 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 22C8A495ZU;
+						LastSwiftMigration = 0800;
 					};
 					5B9010551C99913F00796561 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5B90103E1C99913E00796561;
 					};
 					5B9010601C99913F00796561 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5B90103E1C99913E00796561;
 					};
 				};
@@ -543,11 +697,150 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09057159A1B377B38FC60CBE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoRollUITests/Pods-PhotoRollUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36AC8A61BB49D80D27A6AE3A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoRoll/Pods-PhotoRoll-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C58C6085F041855EB0A0BC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoRollTests/Pods-PhotoRollTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B821766E9EBD7B47B1D975D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoRollTests/Pods-PhotoRollTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DDA2F3E3D50E9413B7C4735 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCA46EB35EBFC3C6D45F812A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoRollUITests/Pods-PhotoRollUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA31EB9EEB54CAFD4908E8DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C1C39C8FA980A2644F20D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F427D52FA560741E9A06815C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoRoll/Pods-PhotoRoll-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B90103B1C99913E00796561 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4565BFB21E8BEC980035E195 /* BenchmarkTimer.swift in Sources */,
 				5BE313A31CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */,
 				5BE313A61CEF197C00C20996 /* ImageDetailRouter.swift in Sources */,
 				5B90108C1C99AAC000796561 /* StringExtensions.swift in Sources */,
@@ -555,24 +848,37 @@
 				5BE313C81CEF2AD400C20996 /* FetchImageWorker.swift in Sources */,
 				5B90107D1C99A9A300796561 /* PhotosTimelineConfigurator.swift in Sources */,
 				5BA250701CBFB303005F59AD /* TimelineCollectionViewController.swift in Sources */,
+				450550BF1DAD0BB400918DF7 /* SwipeInteractionController.swift in Sources */,
+				D8D2CA721E64467200004AB5 /* GDPerformanceMonitor.swift in Sources */,
 				5B90107F1C99A9A300796561 /* PhotosTimelineModels.swift in Sources */,
+				45463F941E66D20A00FA65ED /* ImageDownloader.swift in Sources */,
+				D8D2CA761E64467300004AB5 /* GDPerformanceView.swift in Sources */,
 				5B3FB3321CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
+				4595A6721E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift in Sources */,
+				D8D2CA741E64467200004AB5 /* GDPerformanceMonitorDelegate.swift in Sources */,
 				5BE3139D1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */,
 				5B9010BE1C9AE36900796561 /* FetchMediaWorker.swift in Sources */,
-				5B9010821C99A9A300796561 /* PhotosTimelineViewController.swift in Sources */,
+				5B610A501CFC55CB00646828 /* ImageUtils.swift in Sources */,
 				5B9010811C99A9A300796561 /* PhotosTimelineRouter.swift in Sources */,
 				5BE313A01CEF197C00C20996 /* ImageDetailModels.swift in Sources */,
+				4565BFAF1E8957C90035E195 /* UIPanGestureRecognizerExtensions.swift in Sources */,
 				5B90107E1C99A9A300796561 /* PhotosTimelineInteractor.swift in Sources */,
 				5BE313A91CEF197C00C20996 /* ImageDetailViewController.swift in Sources */,
 				5B8E856D1CAAA10800641C58 /* Decoders.swift in Sources */,
 				5B3FB3281CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */,
-				5B9010451C99913F00796561 /* ViewController.swift in Sources */,
+				5B3F5A0F1CFC7CF6004B4F23 /* ImageTransitioning.swift in Sources */,
+				454AA8CD1E784308007BD6F2 /* UIColorExtensions.swift in Sources */,
+				D8D2CA701E64467200004AB5 /* GDMarginLabel.swift in Sources */,
 				5B3FB32D1CECB36C00035A4E /* ImageCache.swift in Sources */,
 				5B9010801C99A9A300796561 /* PhotosTimelinePresenter.swift in Sources */,
+				45463F971E66D9DD00FA65ED /* UIImageViewExtensions.swift in Sources */,
 				5B9010871C99AA6F00796561 /* BaseClientAPI.swift in Sources */,
 				5B9010911C99AB8A00796561 /* APIModels.swift in Sources */,
 				5BE3139A1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */,
+				D8D2CA781E64467300004AB5 /* GDWindowViewController.swift in Sources */,
+				45453FC21E701BF800AB096E /* TimelineCollectionViewController+ImageTransition.swift in Sources */,
 				5B90104B1C99913F00796561 /* PhotoRoll.xcdatamodeld in Sources */,
+				45453FBE1E701B7600AB096E /* ImageDetailViewController+ImageTransition.swift in Sources */,
 				5B9010431C99913F00796561 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,9 +887,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D2CA711E64467200004AB5 /* GDMarginLabel.swift in Sources */,
 				5BB867861CAC34CB00C109BE /* Decoders.swift in Sources */,
+				D8D2CA731E64467200004AB5 /* GDPerformanceMonitor.swift in Sources */,
 				5B9010B71C9AD53A00796561 /* PhotosTimelineRouter.swift in Sources */,
+				5B3F5A101CFC7CF6004B4F23 /* ImageTransitioning.swift in Sources */,
 				5B90108D1C99AAC000796561 /* StringExtensions.swift in Sources */,
+				D8D2CA771E64467300004AB5 /* GDPerformanceView.swift in Sources */,
 				5B9010B91C9AD53A00796561 /* PhotosTimelineConfigurator.swift in Sources */,
 				5BE313C91CEF2AD400C20996 /* FetchImageWorker.swift in Sources */,
 				5BE313A11CEF197C00C20996 /* ImageDetailModels.swift in Sources */,
@@ -598,6 +908,8 @@
 				5B9010BF1C9AE36900796561 /* FetchMediaWorker.swift in Sources */,
 				5BE313BE1CEF1C8A00C20996 /* ImageDetailInteractorTests.swift in Sources */,
 				5B9010B61C9AD53A00796561 /* PhotosTimelineModels.swift in Sources */,
+				45875F6C1E3B57F30043C52B /* SwipeInteractionController.swift in Sources */,
+				D8D2CA751E64467300004AB5 /* GDPerformanceMonitorDelegate.swift in Sources */,
 				5B3FB3291CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */,
 				5BE313C21CEF1C8A00C20996 /* ImageDetailViewControllerTests.swift in Sources */,
 				5BE313AA1CEF197C00C20996 /* ImageDetailViewController.swift in Sources */,
@@ -605,13 +917,14 @@
 				5BE313C01CEF1C8A00C20996 /* ImageDetailPresenterTests.swift in Sources */,
 				5BA250711CBFB303005F59AD /* TimelineCollectionViewController.swift in Sources */,
 				5BE3139E1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */,
+				D8D2CA791E64467300004AB5 /* GDWindowViewController.swift in Sources */,
 				5BE313A41CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */,
-				5B9010B51C9AD50300796561 /* PhotosTimelineViewController.swift in Sources */,
 				5B9010A81C9ACEFC00796561 /* PhotosTimelineInteractorTests.swift in Sources */,
 				5B90105B1C99913F00796561 /* PhotoRollTests.swift in Sources */,
 				5B3FB3331CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
 				5B9010881C99AA6F00796561 /* BaseClientAPI.swift in Sources */,
 				5BE313A71CEF197C00C20996 /* ImageDetailRouter.swift in Sources */,
+				5B610A511CFC55CB00646828 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,18 +932,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE3139F1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */,
-				5BE313AB1CEF197C00C20996 /* ImageDetailViewController.swift in Sources */,
-				5BE313A81CEF197C00C20996 /* ImageDetailRouter.swift in Sources */,
-				5B3FB32F1CECB36C00035A4E /* ImageCache.swift in Sources */,
-				5BE313A21CEF197C00C20996 /* ImageDetailModels.swift in Sources */,
-				5BE3139C1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */,
-				5BE313A51CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */,
 				5B3FB32A1CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */,
 				5B90108E1C99AAC000796561 /* StringExtensions.swift in Sources */,
 				5B9010A11C9AADAC00796561 /* ClientPhotos.swift in Sources */,
 				5B9010661C99913F00796561 /* PhotoRollUITests.swift in Sources */,
-				5B3FB3341CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
 				5B9010891C99AA6F00796561 /* BaseClientAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,8 +988,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -706,7 +1013,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -728,8 +1035,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -745,9 +1054,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -755,59 +1065,73 @@
 		};
 		5B90106B1C99913F00796561 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE4B27E159BF2BE15EBCD85 /* Pods-PhotoRoll.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 22C8A495ZU;
 				INFOPLIST_FILE = PhotoRoll/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cantero.PhotoRoll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5B90106C1C99913F00796561 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4607D30E7E6E14BEE93C13C /* Pods-PhotoRoll.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 22C8A495ZU;
 				INFOPLIST_FILE = PhotoRoll/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cantero.PhotoRoll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		5B90106E1C99913F00796561 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898E49CCFCA910986FD77488 /* Pods-PhotoRollTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PhotoRollTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cantero.PhotoRollTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoRoll.app/PhotoRoll";
 			};
 			name = Debug;
 		};
 		5B90106F1C99913F00796561 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3838EC79343F96F8959DE09 /* Pods-PhotoRollTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PhotoRollTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cantero.PhotoRollTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoRoll.app/PhotoRoll";
 			};
 			name = Release;
 		};
 		5B9010711C99913F00796561 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD677C8D2C30112C7C9B6C8C /* Pods-PhotoRollUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PhotoRollUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cantero.PhotoRollUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PhotoRoll;
 				USES_XCTRUNNER = YES;
 			};
@@ -815,11 +1139,13 @@
 		};
 		5B9010721C99913F00796561 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8AA02ED98C169398F74CE20 /* Pods-PhotoRollUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PhotoRollUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cantero.PhotoRollUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PhotoRoll;
 				USES_XCTRUNNER = YES;
 			};

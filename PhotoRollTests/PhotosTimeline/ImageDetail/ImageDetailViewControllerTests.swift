@@ -8,58 +8,52 @@
 
 import XCTest
 
-class ImageDetailViewControllerTests: XCTestCase
-{
+class ImageDetailViewControllerTests: XCTestCase {
     // MARK: Subject under test
-    
+
     var sut: ImageDetailViewController!
     var window: UIWindow!
-    
+
     // MARK: Test lifecycle
-    
-    override func setUp()
-    {
+
+    override func setUp() {
         super.setUp()
         window = UIWindow()
         setupImageDetailViewController()
     }
-    
-    override func tearDown()
-    {
+
+    override func tearDown() {
         window = nil
         super.tearDown()
     }
-    
+
     // MARK: Test setup
-    
-    func setupImageDetailViewController()
-    {
-        let bundle = NSBundle(forClass: self.dynamicType)
+
+    func setupImageDetailViewController() {
+        let bundle = Bundle(for: type(of: self))
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        sut = storyboard.instantiateViewControllerWithIdentifier("ImageDetailViewController") as! ImageDetailViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "ImageDetailViewController") as! ImageDetailViewController
     }
-    
-    func loadView()
-    {
+
+    func loadView() {
         window.addSubview(sut.view)
-        NSRunLoop.currentRunLoop().runUntilDate(NSDate())
+        RunLoop.current.run(until: Date())
     }
-    
+
     // MARK: Test doubles
-    
-    class ImageDetailViewControllerOutputSpy : ImageDetailViewControllerOutput {
+
+    class ImageDetailViewControllerOutputSpy: ImageDetailViewControllerOutput {
         //Method call expectations
         var fetchMediaWithIdIsCalled = false
-        
+
         //Spied methods
-        func fetchImage(id: Photos.FetchImage.Request) {
+        func fetchImage(_ id: Photos.FetchImage.Request) {
             fetchMediaWithIdIsCalled = true
         }
     }
-    
-    
+
     // MARK: Tests
-    
+
     func testFetchMediaWithIdIsCalledWhenViewIsLoaded () {
         //Given
         let output = ImageDetailViewControllerOutputSpy()
@@ -67,7 +61,7 @@ class ImageDetailViewControllerTests: XCTestCase
 
         //When
         loadView()
-        
+
         //Then
         XCTAssert(output.fetchMediaWithIdIsCalled, "Fetch Media with Id should be called when the view is loaded")
     }

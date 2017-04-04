@@ -11,54 +11,40 @@ import UIKit
 
 // MARK: Connect View, Interactor, and Presenter
 
-extension ImageDetailViewController: ImageDetailPresenterOutput
-{
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-  {
-    router.passDataToNextScene(segue)
-  }
-}
-
-extension ImageDetailInteractor: ImageDetailViewControllerOutput
-{
-}
-
-extension ImageDetailPresenter: ImageDetailInteractorOutput
-{
-}
-
-class ImageDetailConfigurator
-{
-  // MARK: Object lifecycle
-  
-  class var sharedInstance: ImageDetailConfigurator
-  {
-    struct Static {
-      static var instance: ImageDetailConfigurator?
-      static var token: dispatch_once_t = 0
+extension ImageDetailViewController: ImageDetailPresenterOutput {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        router.passDataToNextScene(segue)
     }
+}
+
+extension ImageDetailInteractor: ImageDetailViewControllerOutput {
+}
+
+extension ImageDetailPresenter: ImageDetailInteractorOutput {
+}
+
+class ImageDetailConfigurator {
     
-    dispatch_once(&Static.token) {
-      Static.instance = ImageDetailConfigurator()
+    // MARK: Object lifecycle
+    
+    static let sharedInstance: ImageDetailConfigurator = {
+        let instance = ImageDetailConfigurator()
+        return instance
+    }()
+    
+    // MARK: Configuration
+    
+    func configure(_ viewController: ImageDetailViewController) {
+        let router = ImageDetailRouter()
+        router.viewController = viewController
+        
+        let presenter = ImageDetailPresenter()
+        presenter.output = viewController
+        
+        let interactor = ImageDetailInteractor()
+        interactor.output = presenter
+        
+        viewController.output = interactor
+        viewController.router = router
     }
-    
-    return Static.instance!
-  }
-  
-  // MARK: Configuration
-  
-  func configure(viewController: ImageDetailViewController)
-  {
-    let router = ImageDetailRouter()
-    router.viewController = viewController
-    
-    let presenter = ImageDetailPresenter()
-    presenter.output = viewController
-    
-    let interactor = ImageDetailInteractor()
-    interactor.output = presenter
-    
-    viewController.output = interactor
-    viewController.router = router
-  }
 }

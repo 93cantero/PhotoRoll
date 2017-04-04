@@ -10,31 +10,37 @@
 import UIKit
 
 protocol PhotosTimelineInteractorInput {
-    func fetchMedia(request: Photos.FetchMedia.Request)
+    func fetchMedia(_ request: Photos.FetchMedia.Request)
 }
 
 protocol PhotosTimelineInteractorOutput {
-    func presentFetchedMedia(response: Photos.FetchMedia.Response)
+    func presentFetchedMedia(_ response: Photos.FetchMedia.Response)
 }
 
-class PhotosTimelineInteractor: PhotosTimelineInteractorInput
-{
+class PhotosTimelineInteractor: PhotosTimelineInteractorInput {
     var output: PhotosTimelineInteractorOutput!
-    var mediaFiveHundredPxWorker = FetchMediaWorker(storeEnv: .Live)
-    
+    var mediaFiveHundredPxWorker = FetchMediaWorker(storeEnv: .live)
+
     // MARK: Business logic
-    
-    func fetchMedia(request: Photos.FetchMedia.Request) {
-        
-        mediaFiveHundredPxWorker.fetchMedia(FiveHundredPx.PopularPhotosWithSize(31)) { (inner: () throws -> [Media]) -> Void in
-            
-            do{
-                let response = Photos.FetchMedia.Response(media: try inner())
-                
+
+    func fetchMedia(_ request: Photos.FetchMedia.Request) {
+        // Size 31
+        let endpoint = FiveHundredPx.popularPhotos(sized:[.maxHeight(.fourHundredFifty),
+                                                          .longestEdge(.twoThousandFourtyEight)])
+        mediaFiveHundredPxWorker.fetchMedia(endpoint) { (inner: () throws -> [Media]) -> Void in
+
+            do {
+                var media = try inner()
+                let mediaCopy = media
+                let mediaCopy2 = mediaCopy
+                media = media + mediaCopy + mediaCopy2
+                let response = Photos.FetchMedia.Response(media: media)
+
                 self.output.presentFetchedMedia(response)
             } catch {
-                
+
             }
         }
     }
+
 }
