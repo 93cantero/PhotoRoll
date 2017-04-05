@@ -43,26 +43,50 @@ class ImageDetailViewControllerTests: XCTestCase {
     // MARK: Test doubles
 
     class ImageDetailViewControllerOutputSpy: ImageDetailViewControllerOutput {
+
         //Method call expectations
         var fetchMediaWithIdIsCalled = false
+        var cancelFetchImageIsCalled = false
 
         //Spied methods
         func fetchImage(_ id: Photos.FetchImage.Request) {
             fetchMediaWithIdIsCalled = true
         }
+        
+        func cancelFetchImage() {
+            cancelFetchImageIsCalled = true
+        }
     }
 
     // MARK: Tests
+    
+    let displayedMedia = Photos.DisplayedMedia(imageId: "1", name: "Foto 1", desc: "Bonita", createdAt: "6/29/07, 3:34 PM", category: "0", imageUrl: "http://www.dumpaday.com/wp-content/uploads/2011/04/Random-Funny-Photos-Part-132_14-2.jpg", highQualityImageUrl: nil, width: 100, height: 100)
 
     func testFetchMediaWithIdIsCalledWhenViewIsLoaded () {
         //Given
         let output = ImageDetailViewControllerOutputSpy()
         sut.output = output
+        
+        sut.photo = displayedMedia
 
         //When
         loadView()
 
         //Then
         XCTAssert(output.fetchMediaWithIdIsCalled, "Fetch Media with Id should be called when the view is loaded")
+    }
+    
+    func testCancelFetchMediaIsCalledWhenViewIsDeallocated() {
+        //Given
+        let output = ImageDetailViewControllerOutputSpy()
+        sut.output = output
+        
+        //When
+        loadView()
+        sut = nil
+        
+        //Then
+        XCTAssert(output.cancelFetchImageIsCalled, "Fetch Media with Id should be cancelled when the view is deallocated")
+
     }
 }

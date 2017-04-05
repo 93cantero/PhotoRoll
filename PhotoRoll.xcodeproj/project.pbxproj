@@ -19,11 +19,21 @@
 		4565BFB21E8BEC980035E195 /* BenchmarkTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565BFB11E8BEC980035E195 /* BenchmarkTimer.swift */; };
 		45875F6C1E3B57F30043C52B /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450550BE1DAD0BB400918DF7 /* SwipeInteractionController.swift */; };
 		4595A6721E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595A6711E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift */; };
+		45EB81591E94F593001C2BDA /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313961CEF197C00C20996 /* ImageDetailPresenter.swift */; };
+		45EB815A1E94F596001C2BDA /* ImageDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313941CEF197C00C20996 /* ImageDetailInteractor.swift */; };
+		45EB815B1E94F599001C2BDA /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313981CEF197C00C20996 /* ImageDetailViewController.swift */; };
+		45EB815C1E94F59B001C2BDA /* ImageDetailViewController+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595A6711E715FBF009B80AD /* ImageDetailViewController+UIScrollView.swift */; };
+		45EB815D1E94F59D001C2BDA /* ImageDetailViewController+ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45453FBD1E701B7600AB096E /* ImageDetailViewController+ImageTransition.swift */; };
+		45EB815E1E94F5AC001C2BDA /* TimelineCollectionViewController+ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45453FC11E701BF800AB096E /* TimelineCollectionViewController+ImageTransition.swift */; };
+		45EB815F1E94F5C3001C2BDA /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45463F931E66D20A00FA65ED /* ImageDownloader.swift */; };
+		45EB81601E94F5E6001C2BDA /* BenchmarkTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565BFB11E8BEC980035E195 /* BenchmarkTimer.swift */; };
+		45EB81611E94F606001C2BDA /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454AA8CC1E784308007BD6F2 /* UIColorExtensions.swift */; };
+		45EB81621E94F609001C2BDA /* UIPanGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565BFAE1E8957C90035E195 /* UIPanGestureRecognizerExtensions.swift */; };
+		45EB81631E94F60B001C2BDA /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45463F961E66D9DD00FA65ED /* UIImageViewExtensions.swift */; };
 		5B3F5A0F1CFC7CF6004B4F23 /* ImageTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F5A0E1CFC7CF6004B4F23 /* ImageTransitioning.swift */; };
 		5B3F5A101CFC7CF6004B4F23 /* ImageTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F5A0E1CFC7CF6004B4F23 /* ImageTransitioning.swift */; };
 		5B3FB3281CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */; };
 		5B3FB3291CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */; };
-		5B3FB32A1CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3271CECACFB00035A4E /* PhotoImageCollectionViewCell.swift */; };
 		5B3FB32D1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
 		5B3FB32E1CECB36C00035A4E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB32C1CECB36C00035A4E /* ImageCache.swift */; };
 		5B3FB3321CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB3311CECCC1300035A4E /* TimelineCollectionGridLayout.swift */; };
@@ -48,7 +58,6 @@
 		5B9010891C99AA6F00796561 /* BaseClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010861C99AA6F00796561 /* BaseClientAPI.swift */; };
 		5B90108C1C99AAC000796561 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90108B1C99AAC000796561 /* StringExtensions.swift */; };
 		5B90108D1C99AAC000796561 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90108B1C99AAC000796561 /* StringExtensions.swift */; };
-		5B90108E1C99AAC000796561 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90108B1C99AAC000796561 /* StringExtensions.swift */; };
 		5B9010911C99AB8A00796561 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010901C99AB8A00796561 /* APIModels.swift */; };
 		5B9010921C99AB8A00796561 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9010901C99AB8A00796561 /* APIModels.swift */; };
 		5B90109F1C9AADAC00796561 /* ClientPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90109E1C9AADAC00796561 /* ClientPhotos.swift */; };
@@ -72,15 +81,12 @@
 		5BE3139A1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313931CEF197C00C20996 /* ImageDetailConfigurator.swift */; };
 		5BE3139B1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313931CEF197C00C20996 /* ImageDetailConfigurator.swift */; };
 		5BE3139D1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313941CEF197C00C20996 /* ImageDetailInteractor.swift */; };
-		5BE3139E1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313941CEF197C00C20996 /* ImageDetailInteractor.swift */; };
 		5BE313A01CEF197C00C20996 /* ImageDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313951CEF197C00C20996 /* ImageDetailModels.swift */; };
 		5BE313A11CEF197C00C20996 /* ImageDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313951CEF197C00C20996 /* ImageDetailModels.swift */; };
 		5BE313A31CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313961CEF197C00C20996 /* ImageDetailPresenter.swift */; };
-		5BE313A41CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313961CEF197C00C20996 /* ImageDetailPresenter.swift */; };
 		5BE313A61CEF197C00C20996 /* ImageDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313971CEF197C00C20996 /* ImageDetailRouter.swift */; };
 		5BE313A71CEF197C00C20996 /* ImageDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313971CEF197C00C20996 /* ImageDetailRouter.swift */; };
 		5BE313A91CEF197C00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313981CEF197C00C20996 /* ImageDetailViewController.swift */; };
-		5BE313AA1CEF197C00C20996 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313981CEF197C00C20996 /* ImageDetailViewController.swift */; };
 		5BE313BE1CEF1C8A00C20996 /* ImageDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313B91CEF1C8A00C20996 /* ImageDetailInteractorTests.swift */; };
 		5BE313C01CEF1C8A00C20996 /* ImageDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313BA1CEF1C8A00C20996 /* ImageDetailPresenterTests.swift */; };
 		5BE313C21CEF1C8A00C20996 /* ImageDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE313BB1CEF1C8A00C20996 /* ImageDetailViewControllerTests.swift */; };
@@ -895,36 +901,44 @@
 				5B90108D1C99AAC000796561 /* StringExtensions.swift in Sources */,
 				D8D2CA771E64467300004AB5 /* GDPerformanceView.swift in Sources */,
 				5B9010B91C9AD53A00796561 /* PhotosTimelineConfigurator.swift in Sources */,
+				45EB815D1E94F59D001C2BDA /* ImageDetailViewController+ImageTransition.swift in Sources */,
 				5BE313C91CEF2AD400C20996 /* FetchImageWorker.swift in Sources */,
 				5BE313A11CEF197C00C20996 /* ImageDetailModels.swift in Sources */,
 				5B9010B41C9AD50100796561 /* PhotosTimelinePresenter.swift in Sources */,
+				45EB815E1E94F5AC001C2BDA /* TimelineCollectionViewController+ImageTransition.swift in Sources */,
 				5B9010A01C9AADAC00796561 /* ClientPhotos.swift in Sources */,
 				5B9010921C99AB8A00796561 /* APIModels.swift in Sources */,
 				5B9010AE1C9ACEFC00796561 /* PhotosTimelineViewControllerTests.swift in Sources */,
+				45EB815F1E94F5C3001C2BDA /* ImageDownloader.swift in Sources */,
 				5B9010BB1C9ADE1400796561 /* AppDelegate.swift in Sources */,
 				5BE3139B1CEF197C00C20996 /* ImageDetailConfigurator.swift in Sources */,
 				5B9010AB1C9ACEFC00796561 /* PhotosTimelinePresenterTests.swift in Sources */,
+				45EB815B1E94F599001C2BDA /* ImageDetailViewController.swift in Sources */,
 				5B3FB32E1CECB36C00035A4E /* ImageCache.swift in Sources */,
 				5B9010BF1C9AE36900796561 /* FetchMediaWorker.swift in Sources */,
 				5BE313BE1CEF1C8A00C20996 /* ImageDetailInteractorTests.swift in Sources */,
 				5B9010B61C9AD53A00796561 /* PhotosTimelineModels.swift in Sources */,
 				45875F6C1E3B57F30043C52B /* SwipeInteractionController.swift in Sources */,
 				D8D2CA751E64467300004AB5 /* GDPerformanceMonitorDelegate.swift in Sources */,
+				45EB81591E94F593001C2BDA /* ImageDetailPresenter.swift in Sources */,
 				5B3FB3291CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */,
 				5BE313C21CEF1C8A00C20996 /* ImageDetailViewControllerTests.swift in Sources */,
-				5BE313AA1CEF197C00C20996 /* ImageDetailViewController.swift in Sources */,
 				5B9010B31C9AD4FE00796561 /* PhotosTimelineInteractor.swift in Sources */,
 				5BE313C01CEF1C8A00C20996 /* ImageDetailPresenterTests.swift in Sources */,
+				45EB815C1E94F59B001C2BDA /* ImageDetailViewController+UIScrollView.swift in Sources */,
 				5BA250711CBFB303005F59AD /* TimelineCollectionViewController.swift in Sources */,
-				5BE3139E1CEF197C00C20996 /* ImageDetailInteractor.swift in Sources */,
 				D8D2CA791E64467300004AB5 /* GDWindowViewController.swift in Sources */,
-				5BE313A41CEF197C00C20996 /* ImageDetailPresenter.swift in Sources */,
+				45EB81621E94F609001C2BDA /* UIPanGestureRecognizerExtensions.swift in Sources */,
 				5B9010A81C9ACEFC00796561 /* PhotosTimelineInteractorTests.swift in Sources */,
 				5B90105B1C99913F00796561 /* PhotoRollTests.swift in Sources */,
 				5B3FB3331CECCC1300035A4E /* TimelineCollectionGridLayout.swift in Sources */,
+				45EB815A1E94F596001C2BDA /* ImageDetailInteractor.swift in Sources */,
+				45EB81631E94F60B001C2BDA /* UIImageViewExtensions.swift in Sources */,
+				45EB81611E94F606001C2BDA /* UIColorExtensions.swift in Sources */,
 				5B9010881C99AA6F00796561 /* BaseClientAPI.swift in Sources */,
 				5BE313A71CEF197C00C20996 /* ImageDetailRouter.swift in Sources */,
 				5B610A511CFC55CB00646828 /* ImageUtils.swift in Sources */,
+				45EB81601E94F5E6001C2BDA /* BenchmarkTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,8 +946,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B3FB32A1CECACFB00035A4E /* PhotoImageCollectionViewCell.swift in Sources */,
-				5B90108E1C99AAC000796561 /* StringExtensions.swift in Sources */,
 				5B9010A11C9AADAC00796561 /* ClientPhotos.swift in Sources */,
 				5B9010661C99913F00796561 /* PhotoRollUITests.swift in Sources */,
 				5B9010891C99AA6F00796561 /* BaseClientAPI.swift in Sources */,

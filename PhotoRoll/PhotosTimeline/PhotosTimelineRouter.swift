@@ -58,6 +58,6 @@ class PhotosTimelineRouter: PhotosTimelineRouterInput {
 
 //        imageDetailsController.imageId = value
         imageDetailsController.photo = displayedMedia
-        imageDetailsController.transitioningDelegate = self.viewController as? UIViewControllerTransitioningDelegate
+        imageDetailsController.transitioningDelegate = self.viewController
     }
 }

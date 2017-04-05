@@ -109,7 +109,7 @@ class BaseClientAPI {
         if let params = target.parameters {
             var paramString = ""
             for (key, value) in params {
-                let escapedKey = key.URLEscapedString
+                let escapedKey = key.urlEscapedString
                 let escapedValue = (value as AnyObject).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
                 paramString += "\(escapedKey)=\(escapedValue!)&"
             }

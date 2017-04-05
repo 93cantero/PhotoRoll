@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 extension String {
-    var URLEscapedString: String {
+    var urlEscapedString: String {
         return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
     }
 
-    var UTF8EncodedData: Data {
+    var utf8EncodedData: Data {
         return self.data(using: String.Encoding.utf8)!
     }
 }
