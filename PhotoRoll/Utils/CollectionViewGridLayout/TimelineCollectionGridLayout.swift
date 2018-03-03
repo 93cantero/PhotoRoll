@@ -13,28 +13,35 @@ import UIKit
 //TODO: Create a totally dynamic layout
 ////////////////////////////////////////
 //TODO: CACHE ROW SIZE AND CHECK PERFORMANCE
+//
+//extension TimelineCollectionViewController : UICollectionViewDelegateFlowLayout {
 
-extension TimelineCollectionViewController : UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        print("HAY: \(displayedMedia.map{ return CGSize(width: $0.width, height: $0.height) })")
+//        if elementsCount == 0 || elementsCount == sizeForElementsInRow.count {
+//            sizeForElementsInRow = []
+//            //Calculate the size for the items on this row
+//            adjustSizeForMedia((indexPath as NSIndexPath).row)
+//        }
+//
+//        let size = sizeForElementsInRow[safe: elementsCount] ?? CGSize(width: 0, height: 0)
+//        elementsCount = elementsCount == sizeForElementsInRow.count-1 ? 0 : elementsCount + 1
+//
+//        return size
+//    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        print("HAY: \(displayedMedia.map{ return CGSize(width: $0.width, height: $0.height) })")
+//
+//        let size = collectionGrid.sizeForItem(at: indexPath.item)
+//        return size
+//    }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        if elementsCount == 0 || elementsCount == sizeForElementsInRow.count {
-            sizeForElementsInRow = []
-            //Calculate the size for the items on this row
-            adjustSizeForMedia((indexPath as NSIndexPath).row)
-        }
-
-        let size = sizeForElementsInRow[safe: elementsCount] ?? CGSize(width: 0, height: 0)
-        elementsCount = elementsCount == sizeForElementsInRow.count-1 ? 0 : elementsCount + 1
-
-        return size
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
-
-}
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return sectionInsets
+//    }
+//
+//}
 
 extension TimelineCollectionViewController {
     
@@ -73,6 +80,12 @@ extension TimelineCollectionViewController {
         screenSize.width = screenSize.width - CGFloat(Double(numberOfElements) * 2.5) - 6
         return screenSize
     }
+    
+    var remainingScreenSize: CGSize {
+        var screenSize = screenSizeWithConstrainedHeight
+        screenSize.width = screenSize.width - (6 + (sizeForElementsInRow.count > 1 ? (2.5 * CGFloat(numberOfElements - 1)) : 0))
+        return screenSize
+    }
 
     func adjustSizeForMedia(_ row: Int) {
         adjustSizeForMedia(row, constrainedTo: screenSizeWithConstrainedHeight)
@@ -81,7 +94,7 @@ extension TimelineCollectionViewController {
             preferredSizeForItems()
         } else {
             if (row < displayedMedia.count) { adjustSizeForMedia(row+1) }
-            else if (screenSizeWithConstrainedHeight.width - (sizeForElementsInRow.last?.width)! < 120) { preferredSizeForItems()
+            else if (remainingScreenSize.width - (sizeForElementsInRow.last?.width)! < 120) { preferredSizeForItems()
             }
         }
 
@@ -89,7 +102,7 @@ extension TimelineCollectionViewController {
 
     func preferredSizeForItems() {
         var screenSize = screenSizeWithConstrainedHeight
-        screenSize.width = screenSize.width - (6 - (sizeForElementsInRow.count > 1 ? (2.5 * CGFloat(numberOfElements - 1)) : 0))
+        screenSize.width = screenSize.width - (6 + (sizeForElementsInRow.count > 1 ? (2.5 * CGFloat(numberOfElements - 1)) : 0))
         
         // 3 elementos == 4 espacios
         // | | |
@@ -122,14 +135,37 @@ extension TimelineCollectionViewController {
 //        //The code above is much cleaner, but it's also much heavy for the performance
 //        var sumOfWidths: CGFloat = 0
 //        var sizes: [CGFloat] = []
-//        
+//
 //        for s in sizeForElementsInRow {
 //            sizes.append(s.width)
 //            sumOfWidths = sumOfWidths + s.width
 //        }
-//        
+//
 //        for i in 0 ..< sizes.count {
 //            sizeForElementsInRow[i] = CGSize(width: ((sizes[i] / sumOfWidths) * screenSizeWithConstrainedHeight.width), height: sizeForElementsInRow[i].height)
 //        }
     }
 }
+
+extension TimelineCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    // MARK: Properties
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if collectionGrid.shouldCalculateSizeForCurrentItem {
+            collectionGrid.calculateSizeForItem(numbered: indexPath.item)
+        }
+        
+        let size = collectionGrid.scaledItemsSize[safe: indexPath.item] ?? CGSize(width: 0, height: 0)
+        //        elementsCount = elementsCount == sizeForElementsInRow.count-1 ? 0 : elementsCount + 1
+        
+        return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .zero
+    }
+    
+}
+

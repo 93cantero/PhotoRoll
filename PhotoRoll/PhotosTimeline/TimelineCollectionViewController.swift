@@ -29,6 +29,9 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
     var imageId: String!
     
     var displayedMedia: [Photos.DisplayedMedia] = []
+    lazy var displayedMediaSizes: [CGSize] = { [unowned self] in
+        return self.displayedMedia.map { return CGSize(width: $0.width, height: $0.height) }
+    }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,12 +43,19 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
         // Register cell classes
         
         output.fetchMedia(Photos.FetchMedia.Request())
+//        setCollectionViewDelegateLayout()
+    }
+    
+    func setCollectionViewDelegateLayout() {
+//        let sizes = displayedMediaSizes
+//        collectionView?.setCollectionViewLayout(collectionGrid, animated: true)
     }
     
     // MARK: Display logic
     
     func displayMedia(_ viewModel: Photos.FetchMedia.ViewModel) {
         displayedMedia = viewModel.displayedMedia
+        collectionGrid.setItemsSize(sizes: self.displayedMedia.map { return CGSize(width: $0.width, height: $0.height) })
         collectionView!.reloadData()
     }
     
@@ -88,7 +98,6 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
         collectionView?.collectionViewLayout.invalidateLayout()
     }
     
-    
     func getCurrentCell() -> UICollectionViewCell? {
         guard let index = selectedIndex else {
             return .none
@@ -102,6 +111,8 @@ class TimelineCollectionViewController: UICollectionViewController, PhotosTimeli
     /// Animation transitioning
     let animationController: ImageTransitioning = ImageTransitioning()
     var selectedIndex: Int?
+    
+    lazy var collectionGrid: CollectionGridLayout = CollectionGridLayout(itemsSize: self.displayedMediaSizes)
 }
 
 // MARK: Extension for parallax effect on photos

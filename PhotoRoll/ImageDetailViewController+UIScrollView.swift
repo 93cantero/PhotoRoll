@@ -21,7 +21,7 @@ extension ImageDetailViewController {
         if self.scrollView.zoomScale > self.scrollView.minimumZoomScale {
             self.scrollView.setZoomScale(self.scrollView.minimumZoomScale, animated: true)
         } else {
-            self.scrollView.zoom(to: self.zoomRect(forScale: self.scrollView.maximumZoomScale, center: sender.location(in: sender.view)), animated: true)
+            self.scrollView.zoom(to: self.zoomRect(forScale: self.scrollView.maximumZoomScale / 2.5, center: sender.location(in: sender.view)), animated: true)
         }
     }
     

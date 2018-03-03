@@ -68,7 +68,7 @@ class PhotosTimelinePresenterTests: XCTestCase {
         let displayedMedia: Photos.DisplayedMedia = output.photosTimeline_fetchMedia_viewModel.displayedMedia[0]
         XCTAssertEqual(displayedMedia.name, "Foto 1", "Name should be equal to Foto 1")
         XCTAssertEqual(displayedMedia.desc, "Bonita", "Description should be equal to 'Bonita'")
-        XCTAssertEqual(displayedMedia.createdAt, "6/29/07, 3:34 PM", "CreatedAt date should equal to the day of the first iPhone release :D")
+        XCTAssertEqual(displayedMedia.createdAt, "6/29/07, 15:34 PM", "CreatedAt date should equal to the day of the first iPhone release :D")
         XCTAssertEqual(displayedMedia.category, "0", "Category should be equal to 0")
         XCTAssertEqual(displayedMedia.imageUrl, "http://www.dumpaday.com/wp-content/uploads/2011/04/Random-Funny-Photos-Part-132_14-2.jpg", "ImageURL should be equal to the 'kidnap photo'")
     }

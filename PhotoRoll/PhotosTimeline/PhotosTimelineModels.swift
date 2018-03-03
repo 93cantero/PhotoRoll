@@ -156,14 +156,14 @@ struct Media: StructDecoder {
              images = jsonImages.map { return Image(withJson: $0 ) }
         }
         
-        let media = Media(imageId: Int(json[notCommonKeys?["imageId"] ?? "imageId"] as! String)!,
+        let media = Media(imageId: json[notCommonKeys?["imageId"] ?? "id"] as! Int,
                           name: json[notCommonKeys?["name"] ?? "name"] as! String,
                           desc: json[notCommonKeys?["desc"] ?? "description"] as? String,
                           createdAt: json[notCommonKeys?["created_at"] ?? "created_at"] as! String,
                           category: json[notCommonKeys?["category"] ?? "category"] as! Int,
                           width: json[notCommonKeys?["width"] ?? "width"] as! Int,
                           height: json[notCommonKeys?["height"] ?? "height"] as! Int,
-                          imageUrl: json[notCommonKeys?["image_url"] ?? "image_url"] as! String,
+                          imageUrl: (json[notCommonKeys?["image_url"] ?? "image_url"] as! [String]).last!,
                           images: images)
 
         return media

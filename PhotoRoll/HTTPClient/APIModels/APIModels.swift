@@ -87,9 +87,9 @@ extension FiveHundredPx : TargetAPI, CustomStringConvertible {
     var sampleJSON: JSONObject {
         switch self {
         case .popularPhotos (_):
-            return ["feature": "popular", "filters": [ "category": false, "exclude": false ], "current_page": 1, "total_pages": 250, "total_items": 5000, "photos": [["imageId": "1", "name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg", "created_at" : "2007-06-29T09:34:19-04:00"]]]
+            return ["feature": "popular", "filters": [ "category": false, "exclude": false ], "current_page": 1, "total_pages": 250, "total_items": 5000, "photos": [["id": 1, "name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg", "created_at" : "2007-06-29T09:34:19-04:00"]]]
         case .photo(_):
-            return ["photo": ["imageId": "1", "name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg", "created_at" : "2007-06-29T09:34:19-04:00"]]
+            return ["photo": ["id": 1, "name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg", "created_at" : "2007-06-29T09:34:19-04:00"]]
         }
     }
 }

@@ -141,10 +141,10 @@ class ImageDetailViewController: UIViewController, ImageDetailViewControllerInpu
         
         labelDetail.enabledTextCheckingTypes = NSTextCheckingResult.CheckingType.link.rawValue
         labelDetail.delegate = self
-//        labelDetail.numberOfLines = 2
-//        labelDetail.allowsDefaultTighteningForTruncation = true
-//        labelDetail.attributedTruncationToken = NSAttributedString(string: "...Show more", attributes: truncatedStringColour)
-//        labelDetail.text = t
+        labelDetail.numberOfLines = 2
+        labelDetail.allowsDefaultTighteningForTruncation = true
+        labelDetail.attributedTruncationToken = NSAttributedString(string: "...Show more", attributes: truncatedStringColour)
+        labelDetail.text = t
         
         styleLinksForLabelDetail()
     }

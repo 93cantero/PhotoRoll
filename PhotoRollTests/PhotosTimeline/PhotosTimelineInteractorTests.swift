@@ -81,7 +81,7 @@ class PhotosTimelineInteractorTests: XCTestCase {
         //When
         let expectation = self.expectation(description: "Waiting for media to be fetched")
 
-        let dict = ["imageId": "1", "name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "created_at": "2007-06-29T09:34:19-04:00", "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg"] as [String : Any]
+        let dict = ["id": 1, "name": "Orange or lemon", "description": "", "category": 0, "width": 472, "height": 709, "created_at": "2007-06-29T09:34:19-04:00", "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg"] as [String : Any]
         var media: [Media] = [Media.parseWithDictionary(["desc": "description"], json: dict)]
         var innerMedia: [Media] = []
         worker.fetchMedia(FiveHundredPx.popularPhotos(sized: [.longestEdge(.twoThousandFourtyEight)])) { (inner: () throws -> [Media]) -> Void in

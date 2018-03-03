@@ -43,6 +43,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app requires access to your library to save photos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We need access to the photo library to save the photos</string>
 	<key>UILaunchStoryboardName</key>
