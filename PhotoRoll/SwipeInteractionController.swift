@@ -28,7 +28,7 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
         view.addGestureRecognizer(panGesture)
     }
 
-    func handleGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func handleGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
 
         // A Swipe of 200 points will lead to 100% completion
         let translation = gestureRecognizer.translation(in: gestureRecognizer.view!.superview!)

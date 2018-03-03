@@ -57,7 +57,7 @@ class BackgroundImageDownloader {
                     completion(data)
                 }
             } else {
-                if let err = error as? NSError, err.code != NSURLErrorCancelled {
+                if let err = error as NSError?, err.code != NSURLErrorCancelled {
                     completion(.none)
                 }
             }

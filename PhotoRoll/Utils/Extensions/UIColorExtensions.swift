@@ -27,7 +27,7 @@ extension UIColor {
         var rgbValue: UInt32 = 0
         Scanner(string: cString).scanHexInt32(&rgbValue)
         
-        if ((cString.characters.count) != 6) {
+        if ((cString.count) != 6) {
             //Gray Color
             Scanner(string: "AAAAAA").scanHexInt32(&rgbValue)
         }

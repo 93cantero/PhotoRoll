@@ -136,27 +136,27 @@ class ImageDetailViewController: UIViewController, ImageDetailViewControllerInpu
         let url = NSURL(string: "http://more.com")!
         let truncatedStringColour = [
             kCTForegroundColorAttributeName as String: UIColor(red: 142.0/255.0, green: 59.0/255.0, blue: 84.0/255.0, alpha: 1.0),
-            NSLinkAttributeName : url
-        ] as [String : Any]
+            NSAttributedStringKey.link : url
+            ] as? [String : Any]
         
-        labelDetail.enabledTextCheckingTypes = NSTextCheckingResult.CheckingType.link.rawValue
-        labelDetail.delegate = self
-        labelDetail.numberOfLines = 2
-        labelDetail.allowsDefaultTighteningForTruncation = true
-        labelDetail.attributedTruncationToken = NSAttributedString(string: "...Show more", attributes: truncatedStringColour)
-        labelDetail.text = t
+//        labelDetail.enabledTextCheckingTypes = NSTextCheckingResult.CheckingType.link.rawValue
+//        labelDetail.delegate = self
+//        labelDetail.numberOfLines = 2
+//        labelDetail.allowsDefaultTighteningForTruncation = true
+//        labelDetail.attributedTruncationToken = NSAttributedString(string: "...Show more", attributes: truncatedStringColour)
+//        labelDetail.text = t
         
         styleLinksForLabelDetail()
     }
     
     func styleLinksForLabelDetail() {
         let linkAttributes = NSMutableDictionary(dictionary: labelDetail.linkAttributes)
-        linkAttributes[NSForegroundColorAttributeName] = UIColor.white
-        linkAttributes[NSFontAttributeName] = UIFont.boldSystemFont(ofSize: labelDetail.font.pointSize)
+        linkAttributes[NSAttributedStringKey.foregroundColor] = UIColor.white
+        linkAttributes[NSAttributedStringKey.font] = UIFont.boldSystemFont(ofSize: labelDetail.font.pointSize)
         labelDetail.linkAttributes = linkAttributes as NSDictionary as! [AnyHashable: Any]
         
         let activeLinkAttributes = NSMutableDictionary(dictionary: labelDetail.activeLinkAttributes)
-        activeLinkAttributes[NSForegroundColorAttributeName] = UIColor(hex: "#BDBDBD")
+        activeLinkAttributes[NSAttributedStringKey.foregroundColor] = UIColor(hex: "#BDBDBD")
         labelDetail.activeLinkAttributes = activeLinkAttributes as NSDictionary as! [AnyHashable: Any]
     }
     
@@ -288,7 +288,7 @@ class ImageDetailViewController: UIViewController, ImageDetailViewControllerInpu
         present(actionSheet, animated: true, completion: .none)
     }
     
-    func didSave(image: UIImage, withError error: Error?, contextInfo: UnsafeRawPointer) {
+    @objc func didSave(image: UIImage, withError error: Error?, contextInfo: UnsafeRawPointer) {
         if error == nil {
             let ac = UIAlertController(title: "Saved!", message: "Image saved to your photos.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

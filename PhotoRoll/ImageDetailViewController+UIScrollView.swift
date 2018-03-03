@@ -169,8 +169,7 @@ extension ImageDetailViewController {
     }
     
     func endTranslation() {
-        if shouldEndTranslation {
-            scrollView.panGestureRecognizer.isEnabled = false
+        if scrollView.center.y > viewHalfHeight + 60 || scrollView.center.y < viewHalfHeight - 60 {
             imageFrame = imageView.superview!.convert(imageView.frame, to: .none)
             fadeOutComponents()
             self.perform(#selector(backButtonSelected), with: self, afterDelay: 0)

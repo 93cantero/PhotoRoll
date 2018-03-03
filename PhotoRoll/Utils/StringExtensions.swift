@@ -24,7 +24,7 @@ extension String {
         guard let data = data(using: .utf8) else { return nil }
         do {
             return try NSAttributedString(data: data,
-                                          options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue], documentAttributes: nil)
+                                          options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
         } catch let error as NSError {
             print(error.localizedDescription)
             return .none
@@ -42,7 +42,7 @@ extension Dictionary {
 }
 
 extension Collection {
-    public subscript(safe safeIndex: Index) -> _Element? {
+    public subscript(safe safeIndex: Index) -> Element? {
         return safeIndex < self.endIndex ? self[safeIndex] : nil
 //        return safeIndex.distanceTo(endIndex) > 0 ?  : nil
     }

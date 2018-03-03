@@ -50,7 +50,7 @@ class PhotoImageCollectionViewCell: UICollectionViewCell {
 
     let isRandomParallax: Bool = false
     lazy var isParallaxByZooming: Bool = {
-        return self.isRandomParallax ? Bool(NSNumber(value: arc4random_uniform(2))) : false
+        return self.isRandomParallax ? Bool(truncating: NSNumber(value: arc4random_uniform(2))) : false
     }()
     
     func setImageOffset(_ imageOffset: CGPoint) {
