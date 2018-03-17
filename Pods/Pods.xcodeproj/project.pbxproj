@@ -1,0 +1,861 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07B95C996146243641453BC39348144A /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E1B62D6E42C67753F0D1DED117FF9D /* TTTAttributedLabel.m */; };
+		21ADBF59DF3C3CFD05DAD250A11AED85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA6E4C10206C3EE9ADFA1D694F1143 /* CoreGraphics.framework */; };
+		28B7BAF4C164001537A48F75DEACD3EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		2A500DE3D7E45503394C7A845DF7D6F4 /* Pods-PhotoRollTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5B152A355807962E0DD730B868AE1F /* Pods-PhotoRollTests-dummy.m */; };
+		37C5D2611271004C78329F933823622F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755FAE73277FCB766461DDF0A4841EC5 /* CoreText.framework */; };
+		3BED0E8BC5A05E583CC353FD2C0281BA /* TTTAttributedLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3FAF32E499990A4A9A217030CC9C8EC /* TTTAttributedLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C0DAF6688A11840891A28B3E8195F41 /* Pods-PhotoRoll-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 357AABD5467A609D3EDA838412008A69 /* Pods-PhotoRoll-dummy.m */; };
+		5EB1F7D507A3E4711CB4A03886DE56FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		60C178DF65C3B4EC208DACEB44314F27 /* Pods-PhotoRoll-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F80CAF83179FC1EDD05E538C3CA4892 /* Pods-PhotoRoll-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6559BD741229C7DDEE8FD282DC7676B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */; };
+		9863A6CBA70D18E2044F7663ABA5FD45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		B143DA9EBB2A97189A70078E3566FD81 /* TTTAttributedLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A08E1C187485C4C3C23AE90DCEB21D7 /* TTTAttributedLabel-dummy.m */; };
+		B3158429FF90311670D68E175572CFD1 /* Pods-PhotoRollUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C5F7F7FB9A97E3DF19DAA560CC5CBF /* Pods-PhotoRollUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C09E089420A6F0590A68F6193A86A4AC /* Pods-PhotoRollUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D93480059DDBFF1C7A6FBEA12B46B111 /* Pods-PhotoRollUITests-dummy.m */; };
+		C56C95063CC6FF961FBA911895DB0106 /* Pods-PhotoRollTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 167A10635D92C4CF38DC0C607FEE0CE0 /* Pods-PhotoRollTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC05227C50A35973279BFC43C5BA705D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		EB9BC53D3ED2A951FCE0B2E38FE1BEC3 /* TTTAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DF821069903DB5B5CCB4B4D9940D7C /* TTTAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F787F583A41065EC84FCC1EE12F52D04 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C372A861343E224530B54B8F28FC52E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EB30F48CC4C6732F9E0EEBED879514E;
+			remoteInfo = TTTAttributedLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0151BC555E6BC69711ECC2C5990267B5 /* Pods-PhotoRollUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoRollUITests.release.xcconfig"; sourceTree = "<group>"; };
+		086402E947A242BD92FF26DC337246B5 /* Pods-PhotoRoll-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoRoll-acknowledgements.plist"; sourceTree = "<group>"; };
+		15FB4C2BCA6398C1727708FEC664F48D /* Pods-PhotoRollUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoRollUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		167A10635D92C4CF38DC0C607FEE0CE0 /* Pods-PhotoRollTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoRollTests-umbrella.h"; sourceTree = "<group>"; };
+		20E7F6AE862D83182ED3F215137D5C2B /* Pods-PhotoRollUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoRollUITests-frameworks.sh"; sourceTree = "<group>"; };
+		29AA6E4C10206C3EE9ADFA1D694F1143 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		2EC7972A8C307037381016C00A5E4DEC /* Pods-PhotoRoll-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoRoll-frameworks.sh"; sourceTree = "<group>"; };
+		2F4B648CD7FC6877855238E2964DB35C /* Pods_PhotoRollTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRollTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		333B69637806EBDBF471BF26674D53AF /* TTTAttributedLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TTTAttributedLabel.modulemap; sourceTree = "<group>"; };
+		357AABD5467A609D3EDA838412008A69 /* Pods-PhotoRoll-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoRoll-dummy.m"; sourceTree = "<group>"; };
+		37C5F7F7FB9A97E3DF19DAA560CC5CBF /* Pods-PhotoRollUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoRollUITests-umbrella.h"; sourceTree = "<group>"; };
+		38E1B62D6E42C67753F0D1DED117FF9D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
+		479285F1D3256A612BE2C7F94F027928 /* Pods-PhotoRollUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoRollUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4C8AC111C6A86FA7A32DE915ED5241BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CBB3BC4D40BA65E2286957E744F3827 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A08E1C187485C4C3C23AE90DCEB21D7 /* TTTAttributedLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTTAttributedLabel-dummy.m"; sourceTree = "<group>"; };
+		6EC0CA2A5225ADFB343680B0674700D5 /* Pods-PhotoRollTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoRollTests-resources.sh"; sourceTree = "<group>"; };
+		6F2ECE0B25CAC72934D5D03EEBB34F22 /* Pods-PhotoRoll.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PhotoRoll.modulemap"; sourceTree = "<group>"; };
+		6F80CAF83179FC1EDD05E538C3CA4892 /* Pods-PhotoRoll-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoRoll-umbrella.h"; sourceTree = "<group>"; };
+		710420300261F7A4E78E3E13DC89ECAA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755FAE73277FCB766461DDF0A4841EC5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		79DF821069903DB5B5CCB4B4D9940D7C /* TTTAttributedLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
+		8359FBB6085F7039CCF3A9E7A6924421 /* TTTAttributedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTTAttributedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85370256CDEEB7C818200ED03D631C2B /* TTTAttributedLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-prefix.pch"; sourceTree = "<group>"; };
+		85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9513CBCEC6709AC5C223F8E8D49C57F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1C2879B1BC4C6D1D2BEDB7E74626576 /* Pods-PhotoRollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoRollTests.release.xcconfig"; sourceTree = "<group>"; };
+		A831F6BC33285B68C3DD5159D0DC3774 /* Pods-PhotoRollTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoRollTests-frameworks.sh"; sourceTree = "<group>"; };
+		A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A9AEF3B772F36FE8D42D8A1C1B7D1E19 /* TTTAttributedLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTTAttributedLabel.xcconfig; sourceTree = "<group>"; };
+		BA60A0F37E9CF24D8BCF860DFECA81A3 /* Pods-PhotoRoll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoRoll.release.xcconfig"; sourceTree = "<group>"; };
+		C25E1922C538BD02760E4D4E1CD0B17F /* Pods_PhotoRoll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRoll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C284F8B171870117CEF3F59C98BA33DA /* Pods_PhotoRollUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRollUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5267928B520280708435387FE722DBF /* Pods-PhotoRollTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoRollTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6A507F16CC1F0FC9F094025F7B07EB9 /* Pods-PhotoRoll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoRoll.debug.xcconfig"; sourceTree = "<group>"; };
+		C8AF3047A3C9CF6D7F4DC08F1393A597 /* Pods-PhotoRollUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoRollUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D93480059DDBFF1C7A6FBEA12B46B111 /* Pods-PhotoRollUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoRollUITests-dummy.m"; sourceTree = "<group>"; };
+		DC01DB50DA2B6FE06EFDCCFF7447D1AF /* Pods-PhotoRollUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoRollUITests-resources.sh"; sourceTree = "<group>"; };
+		DE5B152A355807962E0DD730B868AE1F /* Pods-PhotoRollTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoRollTests-dummy.m"; sourceTree = "<group>"; };
+		E5EB45106037C4BA538A673B53DFEEF8 /* Pods-PhotoRollTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoRollTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E7B01CC0A1815E5B9BFF6A2CD7DBA256 /* Pods-PhotoRoll-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoRoll-resources.sh"; sourceTree = "<group>"; };
+		ED9FCE93F8DA423B1806F11B2F054A48 /* Pods-PhotoRollUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PhotoRollUITests.modulemap"; sourceTree = "<group>"; };
+		EE90A2B12C2F0F4C9E7D4B8AB0E41C90 /* Pods-PhotoRollTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoRollTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F3FAF32E499990A4A9A217030CC9C8EC /* TTTAttributedLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-umbrella.h"; sourceTree = "<group>"; };
+		FC34080CB94FE37B373A59055C2EF6B7 /* Pods-PhotoRoll-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoRoll-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FE2B7411FAF69041DBFA2320DB934B4C /* Pods-PhotoRollTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PhotoRollTests.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AD6FD92AAC66DAF6FD606FBE8C1472E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21ADBF59DF3C3CFD05DAD250A11AED85 /* CoreGraphics.framework in Frameworks */,
+				37C5D2611271004C78329F933823622F /* CoreText.framework in Frameworks */,
+				5EB1F7D507A3E4711CB4A03886DE56FC /* Foundation.framework in Frameworks */,
+				F787F583A41065EC84FCC1EE12F52D04 /* QuartzCore.framework in Frameworks */,
+				6559BD741229C7DDEE8FD282DC7676B3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0222382E29A65D8BA7707D69A055D2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B7BAF4C164001537A48F75DEACD3EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C38DC1DA2641FD75B664DD4D5EE8F0DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC05227C50A35973279BFC43C5BA705D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06301D6BCC17FBDB95B2C221C7FDB51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9863A6CBA70D18E2044F7663ABA5FD45 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C50A46BE7EE1578ACD7ADD7500637E /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				79DF821069903DB5B5CCB4B4D9940D7C /* TTTAttributedLabel.h */,
+				38E1B62D6E42C67753F0D1DED117FF9D /* TTTAttributedLabel.m */,
+				67130A530AB8E8BB7F22732BCE1127C7 /* Support Files */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2357B0F38644467A148935873DB46F1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63F98818BE4E03644A393AEF31BECD80 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				689BEB4ED092769E6EF5B95D34FC710B /* Pods-PhotoRoll */,
+				6D99770229AB7674485CA2FE786DB7C1 /* Pods-PhotoRollTests */,
+				BD0A5611DCEBEF9A0365516CFFD10CC7 /* Pods-PhotoRollUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		67130A530AB8E8BB7F22732BCE1127C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C8AC111C6A86FA7A32DE915ED5241BA /* Info.plist */,
+				333B69637806EBDBF471BF26674D53AF /* TTTAttributedLabel.modulemap */,
+				A9AEF3B772F36FE8D42D8A1C1B7D1E19 /* TTTAttributedLabel.xcconfig */,
+				6A08E1C187485C4C3C23AE90DCEB21D7 /* TTTAttributedLabel-dummy.m */,
+				85370256CDEEB7C818200ED03D631C2B /* TTTAttributedLabel-prefix.pch */,
+				F3FAF32E499990A4A9A217030CC9C8EC /* TTTAttributedLabel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTTAttributedLabel";
+			sourceTree = "<group>";
+		};
+		689BEB4ED092769E6EF5B95D34FC710B /* Pods-PhotoRoll */ = {
+			isa = PBXGroup;
+			children = (
+				710420300261F7A4E78E3E13DC89ECAA /* Info.plist */,
+				6F2ECE0B25CAC72934D5D03EEBB34F22 /* Pods-PhotoRoll.modulemap */,
+				FC34080CB94FE37B373A59055C2EF6B7 /* Pods-PhotoRoll-acknowledgements.markdown */,
+				086402E947A242BD92FF26DC337246B5 /* Pods-PhotoRoll-acknowledgements.plist */,
+				357AABD5467A609D3EDA838412008A69 /* Pods-PhotoRoll-dummy.m */,
+				2EC7972A8C307037381016C00A5E4DEC /* Pods-PhotoRoll-frameworks.sh */,
+				E7B01CC0A1815E5B9BFF6A2CD7DBA256 /* Pods-PhotoRoll-resources.sh */,
+				6F80CAF83179FC1EDD05E538C3CA4892 /* Pods-PhotoRoll-umbrella.h */,
+				C6A507F16CC1F0FC9F094025F7B07EB9 /* Pods-PhotoRoll.debug.xcconfig */,
+				BA60A0F37E9CF24D8BCF860DFECA81A3 /* Pods-PhotoRoll.release.xcconfig */,
+			);
+			name = "Pods-PhotoRoll";
+			path = "Target Support Files/Pods-PhotoRoll";
+			sourceTree = "<group>";
+		};
+		6D99770229AB7674485CA2FE786DB7C1 /* Pods-PhotoRollTests */ = {
+			isa = PBXGroup;
+			children = (
+				9513CBCEC6709AC5C223F8E8D49C57F7 /* Info.plist */,
+				FE2B7411FAF69041DBFA2320DB934B4C /* Pods-PhotoRollTests.modulemap */,
+				EE90A2B12C2F0F4C9E7D4B8AB0E41C90 /* Pods-PhotoRollTests-acknowledgements.markdown */,
+				E5EB45106037C4BA538A673B53DFEEF8 /* Pods-PhotoRollTests-acknowledgements.plist */,
+				DE5B152A355807962E0DD730B868AE1F /* Pods-PhotoRollTests-dummy.m */,
+				A831F6BC33285B68C3DD5159D0DC3774 /* Pods-PhotoRollTests-frameworks.sh */,
+				6EC0CA2A5225ADFB343680B0674700D5 /* Pods-PhotoRollTests-resources.sh */,
+				167A10635D92C4CF38DC0C607FEE0CE0 /* Pods-PhotoRollTests-umbrella.h */,
+				C5267928B520280708435387FE722DBF /* Pods-PhotoRollTests.debug.xcconfig */,
+				A1C2879B1BC4C6D1D2BEDB7E74626576 /* Pods-PhotoRollTests.release.xcconfig */,
+			);
+			name = "Pods-PhotoRollTests";
+			path = "Target Support Files/Pods-PhotoRollTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				FC06AE555EA9FFC5AA21CB25EFBEEB6C /* Pods */,
+				9AEC087F3F95A9F749D7D0E728CEAE39 /* Products */,
+				63F98818BE4E03644A393AEF31BECD80 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9AEC087F3F95A9F749D7D0E728CEAE39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C25E1922C538BD02760E4D4E1CD0B17F /* Pods_PhotoRoll.framework */,
+				2F4B648CD7FC6877855238E2964DB35C /* Pods_PhotoRollTests.framework */,
+				C284F8B171870117CEF3F59C98BA33DA /* Pods_PhotoRollUITests.framework */,
+				8359FBB6085F7039CCF3A9E7A6924421 /* TTTAttributedLabel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD0A5611DCEBEF9A0365516CFFD10CC7 /* Pods-PhotoRollUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB3BC4D40BA65E2286957E744F3827 /* Info.plist */,
+				ED9FCE93F8DA423B1806F11B2F054A48 /* Pods-PhotoRollUITests.modulemap */,
+				15FB4C2BCA6398C1727708FEC664F48D /* Pods-PhotoRollUITests-acknowledgements.markdown */,
+				479285F1D3256A612BE2C7F94F027928 /* Pods-PhotoRollUITests-acknowledgements.plist */,
+				D93480059DDBFF1C7A6FBEA12B46B111 /* Pods-PhotoRollUITests-dummy.m */,
+				20E7F6AE862D83182ED3F215137D5C2B /* Pods-PhotoRollUITests-frameworks.sh */,
+				DC01DB50DA2B6FE06EFDCCFF7447D1AF /* Pods-PhotoRollUITests-resources.sh */,
+				37C5F7F7FB9A97E3DF19DAA560CC5CBF /* Pods-PhotoRollUITests-umbrella.h */,
+				C8AF3047A3C9CF6D7F4DC08F1393A597 /* Pods-PhotoRollUITests.debug.xcconfig */,
+				0151BC555E6BC69711ECC2C5990267B5 /* Pods-PhotoRollUITests.release.xcconfig */,
+			);
+			name = "Pods-PhotoRollUITests";
+			path = "Target Support Files/Pods-PhotoRollUITests";
+			sourceTree = "<group>";
+		};
+		D2357B0F38644467A148935873DB46F1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				29AA6E4C10206C3EE9ADFA1D694F1143 /* CoreGraphics.framework */,
+				755FAE73277FCB766461DDF0A4841EC5 /* CoreText.framework */,
+				30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */,
+				A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */,
+				85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FC06AE555EA9FFC5AA21CB25EFBEEB6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03C50A46BE7EE1578ACD7ADD7500637E /* TTTAttributedLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		599C67EFA2C15938E4636A037CE80C89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BED0E8BC5A05E583CC353FD2C0281BA /* TTTAttributedLabel-umbrella.h in Headers */,
+				EB9BC53D3ED2A951FCE0B2E38FE1BEC3 /* TTTAttributedLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6611D2D95AF0A17B14E11B793D2D8602 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56C95063CC6FF961FBA911895DB0106 /* Pods-PhotoRollTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CA2EB38368B08D97C9EC2F8F6E55AE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3158429FF90311670D68E175572CFD1 /* Pods-PhotoRollUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD87BC5471F1A2BDA5B99BDA2BE3B9D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C178DF65C3B4EC208DACEB44314F27 /* Pods-PhotoRoll-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1EB30F48CC4C6732F9E0EEBED879514E /* TTTAttributedLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF9A4915DC8D8CCBD81EB9CB9E0C1836 /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */;
+			buildPhases = (
+				B4281C799E90859067D447F9F504644C /* Sources */,
+				4AD6FD92AAC66DAF6FD606FBE8C1472E /* Frameworks */,
+				599C67EFA2C15938E4636A037CE80C89 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTTAttributedLabel;
+			productName = TTTAttributedLabel;
+			productReference = 8359FBB6085F7039CCF3A9E7A6924421 /* TTTAttributedLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6B763FFE8717B7A258A19D2DC4898849 /* Pods-PhotoRoll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02979778A1239C95007783CC051ED3C7 /* Build configuration list for PBXNativeTarget "Pods-PhotoRoll" */;
+			buildPhases = (
+				ACBDF03FCE47F9AFF9A37D6AA745D416 /* Sources */,
+				F06301D6BCC17FBDB95B2C221C7FDB51 /* Frameworks */,
+				FD87BC5471F1A2BDA5B99BDA2BE3B9D3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE9CE336BBDB9FDE8E66826A07136054 /* PBXTargetDependency */,
+			);
+			name = "Pods-PhotoRoll";
+			productName = "Pods-PhotoRoll";
+			productReference = C25E1922C538BD02760E4D4E1CD0B17F /* Pods_PhotoRoll.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		833939D18B49B86FFA66FC356D6D264C /* Pods-PhotoRollTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA950DEAD47391D5C3B92C3D779EE43E /* Build configuration list for PBXNativeTarget "Pods-PhotoRollTests" */;
+			buildPhases = (
+				901A4DC5973EF5282C018B3C1AF2CB70 /* Sources */,
+				C0222382E29A65D8BA7707D69A055D2B /* Frameworks */,
+				6611D2D95AF0A17B14E11B793D2D8602 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PhotoRollTests";
+			productName = "Pods-PhotoRollTests";
+			productReference = 2F4B648CD7FC6877855238E2964DB35C /* Pods_PhotoRollTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99FF49CB7C7FC741289CF26BF15BB07A /* Pods-PhotoRollUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D70AFEE863189C96E29598CCED69576 /* Build configuration list for PBXNativeTarget "Pods-PhotoRollUITests" */;
+			buildPhases = (
+				63402644F4A94845E4CD8E58726632F2 /* Sources */,
+				C38DC1DA2641FD75B664DD4D5EE8F0DD /* Frameworks */,
+				83CA2EB38368B08D97C9EC2F8F6E55AE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PhotoRollUITests";
+			productName = "Pods-PhotoRollUITests";
+			productReference = C284F8B171870117CEF3F59C98BA33DA /* Pods_PhotoRollUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0900;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9AEC087F3F95A9F749D7D0E728CEAE39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B763FFE8717B7A258A19D2DC4898849 /* Pods-PhotoRoll */,
+				833939D18B49B86FFA66FC356D6D264C /* Pods-PhotoRollTests */,
+				99FF49CB7C7FC741289CF26BF15BB07A /* Pods-PhotoRollUITests */,
+				1EB30F48CC4C6732F9E0EEBED879514E /* TTTAttributedLabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63402644F4A94845E4CD8E58726632F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C09E089420A6F0590A68F6193A86A4AC /* Pods-PhotoRollUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		901A4DC5973EF5282C018B3C1AF2CB70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A500DE3D7E45503394C7A845DF7D6F4 /* Pods-PhotoRollTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACBDF03FCE47F9AFF9A37D6AA745D416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C0DAF6688A11840891A28B3E8195F41 /* Pods-PhotoRoll-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4281C799E90859067D447F9F504644C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B143DA9EBB2A97189A70078E3566FD81 /* TTTAttributedLabel-dummy.m in Sources */,
+				07B95C996146243641453BC39348144A /* TTTAttributedLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE9CE336BBDB9FDE8E66826A07136054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTTAttributedLabel;
+			target = 1EB30F48CC4C6732F9E0EEBED879514E /* TTTAttributedLabel */;
+			targetProxy = 4C372A861343E224530B54B8F28FC52E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0700BB992C0917506A39D26BC983AD03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8AF3047A3C9CF6D7F4DC08F1393A597 /* Pods-PhotoRollUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoRollUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoRollUITests/Pods-PhotoRollUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoRollUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		21BA5F69818766D384B4C978311A7A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1C2879B1BC4C6D1D2BEDB7E74626576 /* Pods-PhotoRollTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoRollTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoRollTests/Pods-PhotoRollTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoRollTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4400DC7B2710C051689FA19AF2E7F9B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AEF3B772F36FE8D42D8A1C1B7D1E19 /* TTTAttributedLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTTAttributedLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TTTAttributedLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D60AAA3122BC54F9AFB2C753A8CE0CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0151BC555E6BC69711ECC2C5990267B5 /* Pods-PhotoRollUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoRollUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoRollUITests/Pods-PhotoRollUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoRollUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8214D39F7C597959571E51AA96580DC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AEF3B772F36FE8D42D8A1C1B7D1E19 /* TTTAttributedLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTTAttributedLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TTTAttributedLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF17B8E0596E79230366AD0F1C11D964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA60A0F37E9CF24D8BCF860DFECA81A3 /* Pods-PhotoRoll.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoRoll/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoRoll/Pods-PhotoRoll.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoRoll;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA5AC7D4B20FAAF48401EF840AD0D79D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5267928B520280708435387FE722DBF /* Pods-PhotoRollTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoRollTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoRollTests/Pods-PhotoRollTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoRollTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDE5579F562FB351DA6ED9DADB864A43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A507F16CC1F0FC9F094025F7B07EB9 /* Pods-PhotoRoll.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoRoll/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoRoll/Pods-PhotoRoll.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoRoll;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02979778A1239C95007783CC051ED3C7 /* Build configuration list for PBXNativeTarget "Pods-PhotoRoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDE5579F562FB351DA6ED9DADB864A43 /* Debug */,
+				DF17B8E0596E79230366AD0F1C11D964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D70AFEE863189C96E29598CCED69576 /* Build configuration list for PBXNativeTarget "Pods-PhotoRollUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0700BB992C0917506A39D26BC983AD03 /* Debug */,
+				4D60AAA3122BC54F9AFB2C753A8CE0CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF9A4915DC8D8CCBD81EB9CB9E0C1836 /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8214D39F7C597959571E51AA96580DC8 /* Debug */,
+				4400DC7B2710C051689FA19AF2E7F9B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA950DEAD47391D5C3B92C3D779EE43E /* Build configuration list for PBXNativeTarget "Pods-PhotoRollTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5AC7D4B20FAAF48401EF840AD0D79D /* Debug */,
+				21BA5F69818766D384B4C978311A7A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

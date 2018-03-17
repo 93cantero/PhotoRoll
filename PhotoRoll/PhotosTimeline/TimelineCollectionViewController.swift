@@ -133,11 +133,6 @@ extension TimelineCollectionViewController {
             self.collectionView?.layoutIfNeeded()
         }, completion: .none)
     }
-    
-    //    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-    //        self.collectionView?.collectionViewLayout.invalidateLayout()
-    //    }
-    
 }
 
 
